@@ -1,0 +1,454 @@
+2016/11/28 16:17:09 [error] 1008#1008: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv/
+2016/11/28 16:17:11 [error] 1008#1008: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv/
+2016/11/28 16:17:11 [error] 1008#1008: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv/
+2016/11/28 16:17:13 [error] 1008#1008: *40 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:17:31 [error] 1008#1008: *40 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:18:18 [error] 1008#1008: *40 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:18:19 [error] 1008#1008: *40 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:21:04 [error] 1008#1008: *45 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:21:05 [error] 1008#1008: *47 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:21:05 [error] 1008#1008: *49 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:21:07 [error] 1008#1008: *67 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:21:29 [error] 1008#1008: *67 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:01 [error] 1008#1008: *67 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:02 [error] 1008#1008: *67 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:03 [error] 1008#1008: *93 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:40 [error] 1008#1008: *93 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:41 [error] 1008#1008: *93 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:42 [error] 1008#1008: *99 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:22:42 [error] 1008#1008: *101 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /sr
+2016/11/28 16:22:49 [error] 1008#1008: *101 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /sr
+2016/11/28 16:25:35 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:36 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:37 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:37 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:37 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:37 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:37 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:25:38 [error] 1008#1008: *104 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:33 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:34 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:35 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:36 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:37 [error] 1771#1771: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:37 [error] 1771#1771: *20 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:38 [error] 1771#1771: *22 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *24 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *26 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *28 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *30 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *32 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *34 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *36 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *38 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *40 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *42 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *44 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *46 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *48 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *50 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *52 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *54 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *56 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:39 [error] 1771#1771: *58 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:40 [error] 1771#1771: *60 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:40 [error] 1771#1771: *62 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:40 [error] 1771#1771: *64 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:40 [error] 1771#1771: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:40 [error] 1771#1771: *68 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:41 [error] 1771#1771: *70 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:41 [error] 1771#1771: *72 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:41 [error] 1771#1771: *74 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:41 [error] 1771#1771: *76 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:26:46 [error] 1771#1771: *76 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:27:04 [error] 1771#1771: *76 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:36 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:37 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:38 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:38 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:38 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:38 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:28:38 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:29:03 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:29:04 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/srv/http/flommerce.dev/bootstrap/autoload.php): failed to open stream: Permission denied in /srv/http/flommerce.dev/public/index.php on line 22
+PHP message: PHP Fatal error:  require(): Failed opening required '/srv/http/flommerce.dev/public/../bootstrap/autoload.php' (include_path='.:') in /srv/http/flommerce.dev/public/index.php on line 22" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/28 16:30:00 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:30:02 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
+2016/11/28 16:30:08 [error] 1771#1771: *80 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(113): Illuminate\Log\Writer->writeLog('error', O...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/flommerce.dev/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/flommerce.dev/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Log/Writer.php(202): Monolog\Logger->error(Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#4 /srv
