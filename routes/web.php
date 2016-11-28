@@ -15,32 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Setup the Categories
-Route::get('/cats', function () {
-	/* 
-	List all of the child categories and display them. 
-	*/
-	return view('cats');
-});
-Route::post('cats/create', function () {
-	/* 
-	Create a new category, self explainatory. 
-	*/
-	return view('cats.form');
-});
-Route::patch('cats/update', function () {
-    /* 
-	Send a weird Patch request to update any category name,
-	or description 
-	*/
-	return view('cats.form');
-});
-Route::delete('cats/delete', function() {
-    /* 
-	Delete a category and trickle down. Removing all Children
-	beneath it.
-	*/
-	return view('cats');
-});
 
-
+/* 
+ * This collection of Routes handles the Category functionality.
+ */
+Route::get('cats', 'CatsController@index'); // Call the index method, display parent and child cats
+Route::get('cats/all','CatsController@all'); // Read the Cat
+Route::post('cats/create','CatsController@create'); // Create a Cat
+Route::patch('cats/{cat}/update', 'CatsController@update'); // Update a Cat
+Route::delete('cats/{cat}/remove', 'CatsController@remove'); // Kill the Cat.

@@ -1,31 +1,50 @@
 <?php
+namespace App\Http\Controllers;
 
-namespace App\Http\Controllers\CatsController;
-
+use App\Cat;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Cats
+use App\Http\Controllers\Controller;
 
 class CatsController extends Controller
 {
-	public function __construct() {
-		/*
-			List all Categories and Children
-		*/
+    public function __construct()
+    {
+
+    }
+
+	public function index()
+	{
+        $cats = Cat::all();
+        $title = "Listing all categories";
+
+		return view('cats.index', compact('cats', 'title'));
 	}
-	public function create() {
+
+	public function show(Cat $cat)
+	{
+        $cat->load('cats');
+
+		return view('cats.cat', compact('cat'));
+	}
+
+	public function add()
+	{
 		/*
 			Create a new Category
 		*/
+		return view('cats.create');
 	}
 
-	public function update($id) {
+	public function edit(Cat $cat, $id)
+	{
 		/*
 			Update existing category
 		*/
 	}
 
-	public function remove($id) {
-		/* 
+	public function remove(Cat $cat, $id)
+	{
+		/*
 			TODO: Insert Awesome Kill Cat Command.
 			NOTE: No Cats were actually killed in building this application.
 			Remove a category

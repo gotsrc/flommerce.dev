@@ -1,7 +1,13 @@
-TIME LOGGER:
+BREAKS:
+* Breaks [0/2]:
+** TODO Go out on an Errand expected: 1hr
+   :LOGBOOK:
+   CLOCK: [2016-11-28 Mon 18:00]--[2016-11-28 Mon 19:00] =>  1:00
+   :END:
+** TODO Make coffee: Expected 2min
 
-* Create E-commerce app for Flow [1/7]
-** DONE Setup Laravel [5/5]
+* Create E-commerce app for Flow [1/9]
+** DONE Setup Laravel [6/6]
 *** DONE Initiate Git Repo
     :PROPERTIES:
     :ORDERED:  t
@@ -19,19 +25,30 @@ TIME LOGGER:
     :END:
 *** DONE Setup Database
     :LOGBOOK:
-    CLOCK: [2016-11-28 Mon 16:47]--[2016-11-28 Mon 16:48] =>  0:01
+    CLOCK:  [2016-11-28 Mon 16:47]--[2016-11-28 Mon 16:48] =>  0:01
     :END:
 *** DONE Setup Environment
     :LOGBOOK:
     CLOCK: [2016-11-28 Mon 16:48]--[2016-11-28 Mon 16:49] =>  0:01
     :END:
-** TODO Categories [0/5]
+*** DONE Setup Routes File for Categories
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 17:30]--[2016-11-28 Mon 17:32] =>  0:02
+    :END:
+** TODO Categories [0/6]
+   :LOGBOOK:
+   CLOCK: [2016-11-28 Mon 20:00]--[2016-11-28 Mon 21:00] =>  1:00
+   :END:
+*** TODO Flesh out the CatsController
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 17:32]--[2016-11-28 Mon 17:42] =>  0:10
+    :END:
 *** TODO Categories can have many child categories.
 *** TODO Each Category should be Unique and have an ID assigned.
 *** TODO Categories don't need to be dated or timed.
 *** TODO Category should have a description
 *** TODO Category should have a slug for SEO.
-** TODO [#A] Category Listings [0/3]
+** TODO Category Listings [0/3]
 *** TODO Category Listing should grab the ID of a child category and list all products
 *** TODO A Category Can Have Many Products
 ** TODO Products [0/1]
@@ -46,3 +63,10 @@ TIME LOGGER:
 *** TODO If order success returns true forward them to the homepage.
 *** TODO If order success returns false send them back to the page they were at and show errors.
 *** TODO Email the User upon Order Success
+** TODO Write Tests [0/6]
+*** TODO Test the Categories
+*** TODO Test the Listings
+*** TODO Test Product View
+*** TODO Test Search
+*** TODO Test the Checkout
+*** TODO Test Order Success

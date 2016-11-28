@@ -1,14 +1,30 @@
-* Create E-Commerce Application for Flow [0/7]
-** TODO Setup Laravel [5/5]
+TIME LOGGER:
+
+* Create E-commerce app for Flow [1/7]
+** DONE Setup Laravel [5/5]
 *** DONE Initiate Git Repo
-#+BEGIN: columnview :hlines 1 :id "local"
-
-#+END:
-
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:43]--[2016-11-28 Mon 16:45] =>  0:02
+    :END:
 *** DONE Set Permissions on Storage
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:45]--[2016-11-28 Mon 16:46] =>  0:01
+    :END:
 *** DONE Set Permissions on Bootstrap
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:46]--[2016-11-28 Mon 16:47] =>  0:01
+    :END:
 *** DONE Setup Database
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:47]--[2016-11-28 Mon 16:48] =>  0:01
+    :END:
 *** DONE Setup Environment
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:48]--[2016-11-28 Mon 16:49] =>  0:01
+    :END:
 ** TODO Categories [0/5]
 *** TODO Categories can have many child categories.
 *** TODO Each Category should be Unique and have an ID assigned.
