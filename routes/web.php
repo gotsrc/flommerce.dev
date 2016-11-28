@@ -35,7 +35,7 @@ Route::patch('cats/update', function () {
 	*/
 	return view('cats.form');
 });
-Route::delete('cats/remove', function() {
+Route::delete('cats/delete', function() {
     /* 
 	Delete a category and trickle down. Removing all Children
 	beneath it.

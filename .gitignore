@@ -1,8 +1,25 @@
+/logs
+*.log
 /node_modules
 /public/storage
-/storage/*.key
 /vendor
 /.idea
+/_notes
 Homestead.json
 Homestead.yaml
 .env
+.env.example
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
