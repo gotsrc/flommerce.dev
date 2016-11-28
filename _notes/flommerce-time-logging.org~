@@ -1,0 +1,32 @@
+* Create E-Commerce Application for Flow [0/7]
+** TODO Setup Laravel [5/5]
+*** DONE Initiate Git Repo
+#+BEGIN: columnview :hlines 1 :id "local"
+
+#+END:
+
+*** DONE Set Permissions on Storage
+*** DONE Set Permissions on Bootstrap
+*** DONE Setup Database
+*** DONE Setup Environment
+** TODO Categories [0/5]
+*** TODO Categories can have many child categories.
+*** TODO Each Category should be Unique and have an ID assigned.
+*** TODO Categories don't need to be dated or timed.
+*** TODO Category should have a description
+*** TODO Category should have a slug for SEO.
+** TODO [#A] Category Listings [0/3]
+*** TODO Category Listing should grab the ID of a child category and list all products
+*** TODO A Category Can Have Many Products
+** TODO Products [0/1]
+*** TODO Products should have the following:
+*** Name, Description, Cat ID, User ID, TIMESTAMPS.
+** TODO Search [0/1]
+*** TODO Search Should be able to sift through the database and search through categories.
+** TODO Checkout [0/4]
+*** TODO User should be able to review their purchase before clicking the continue button.
+*** TODO Once reviewed process fake payment so Order Success can return true or false
+** TODO Order Success [0/3]
+*** TODO If order success returns true forward them to the homepage.
+*** TODO If order success returns false send them back to the page they were at and show errors.
+*** TODO Email the User upon Order Success

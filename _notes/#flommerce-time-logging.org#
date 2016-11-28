@@ -1,0 +1,66 @@
+BREAKS:
+* Breaks [0/2]:
+** TODO Go out on an Errand expected: 1hr
+** TODO Make coffee: Expected 2min
+
+* Create E-commerce app for Flow [1/9]
+** DONE Setup Laravel [6/6]
+*** DONE Initiate Git Repo
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:43]--[2016-11-28 Mon 16:45] =>  0:02
+    :END:
+*** DONE Set Permissions on Storage
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:45]--[2016-11-28 Mon 16:46] =>  0:01
+    :END:
+*** DONE Set Permissions on Bootstrap
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:46]--[2016-11-28 Mon 16:47] =>  0:01
+    :END:
+*** DONE Setup Database
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:47]--[2016-11-28 Mon 16:48] =>  0:01
+    :END:
+*** DONE Setup Environment
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 16:48]--[2016-11-28 Mon 16:49] =>  0:01
+    :END:
+*** DONE Setup Routes File for Categories
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 17:30]--[2016-11-28 Mon 17:32] =>  0:02
+    :END:
+** TODO Categories [0/6]
+*** TODO Flesh out the CatsController
+    :LOGBOOK:
+    CLOCK: [2016-11-28 Mon 17:32]--[2016-11-28 Mon 17:42] =>  0:10
+    :END:
+*** TODO Categories can have many child categories.
+*** TODO Each Category should be Unique and have an ID assigned.
+*** TODO Categories don't need to be dated or timed.
+*** TODO Category should have a description
+*** TODO Category should have a slug for SEO.
+** TODO Category Listings [0/3]
+*** TODO Category Listing should grab the ID of a child category and list all products
+*** TODO A Category Can Have Many Products
+** TODO Products [0/1]
+*** TODO Products should have the following:
+*** Name, Description, Cat ID, User ID, TIMESTAMPS.
+** TODO Search [0/1]
+*** TODO Search Should be able to sift through the database and search through categories.
+** TODO Checkout [0/4]
+*** TODO User should be able to review their purchase before clicking the continue button.
+*** TODO Once reviewed process fake payment so Order Success can return true or false
+** TODO Order Success [0/3]
+*** TODO If order success returns true forward them to the homepage.
+*** TODO If order success returns false send them back to the page they were at and show errors.
+*** TODO Email the User upon Order Success
+** TODO Write Tests [0/6]
+*** TODO Test the Categories
+*** TODO Test the Listings
+*** TODO Test Product View
+*** TODO Test Search
+*** TODO Test the Checkout
+*** TODO Test Order Success
