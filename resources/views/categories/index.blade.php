@@ -3,12 +3,14 @@
 @section('content')
     <h1>Categories</h1>
     <hr />
-    <ul>
+    <dl>
         @foreach ($categories as $category)
-        <li>
+        <dt>
             <a href="{{ url('/categories', $category->id) }}">{{ $category->title }}</a>
-            <p>{{ $category->description }}</p>
-        </li>
+        </dt>
+        <dd>
+            {{ $category->description }}
+        </dd>
         @endforeach
-    </ul>
+    </dl>
 @endsection

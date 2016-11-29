@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unique()->index();
             $table->string('title')->unique();
             $table->text('description');
-            $table->string('list_price');
-            $table->boolean('sale');
+            $table->decimal('price', 10, 2);
+            $table->boolean('sale')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
         });

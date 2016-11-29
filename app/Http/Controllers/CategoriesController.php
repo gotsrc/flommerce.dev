@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Request;
@@ -25,8 +26,9 @@ class CategoriesController extends Controller
     public function show($id)
     {
         $category = Category::findOrFail($id);
+        $product = Product::findOrFail($id);
 
-        return view('categories.show', compact('category'));
+        return view('categories.show', compact('category', 'product'));
     }
 
     //
