@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,18 @@ class CreateCategoriesTable extends Migration
     {
         /*
          * Populate the Database with the following schema.
-         * A category is expected to have a title, description and a slug.
-         * Also timestamps for analysis by date.
+         * A product is expected to have a title, category_id, description, list price,
+         * whether the item is in the sales or not, slug, time created, time updated.
          */
-        Schema::Create('categories', function (Blueprint $table)
+        Schema::Create('products', function (Blueprint $table)
         {
             $table->increments('id')->unsigned()->index();
-            $table->string('title');
+            $table->integer('category_id')->unique()->index();
+            $table->string('title')->unique();
             $table->text('description');
-            $table->string('slug');
+            $table->string('list_price');
+            $table->boolean('sale');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
@@ -35,6 +38,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories');
+        Schema::drop('products');
     }
 }
