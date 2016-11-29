@@ -22,7 +22,8 @@ Route::get('categories', 'CategoriesController@index');
 // Create a category
 Route::get('categories/create', 'CategoriesController@create');
 
-// Show a category by slug.
+// Show a category by a given ID. Will implement slugs later.
 Route::get('categories/{id}', 'CategoriesController@show');
 
+// Method for storing the data after input.
 Route::post('categories', 'CategoriesController@store');
