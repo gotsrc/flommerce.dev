@@ -11,16 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-/* 
+Route::get('/', 'CategoriesController@index');
+/*
  * This collection of Routes handles the Category functionality.
  */
-Route::get('cats', 'CatsController@index'); // Call the index method, display parent and child cats
-Route::get('cats/all','CatsController@all'); // Read the Cat
-Route::post('cats/create','CatsController@create'); // Create a Cat
-Route::patch('cats/{cat}/update', 'CatsController@update'); // Update a Cat
-Route::delete('cats/{cat}/remove', 'CatsController@remove'); // Kill the Cat.
+
+// Show all categories
+Route::get('categories', 'CategoriesController@index');
+
+// Create a category
+Route::get('categories/create', 'CategoriesController@create');
+
+// Show a category by slug.
+Route::get('categories/{id}', 'CategoriesController@show');
+
+Route::post('categories', 'CategoriesController@store');

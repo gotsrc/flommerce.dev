@@ -35,11 +35,11 @@ BREAKS:
     :LOGBOOK:
     CLOCK: [2016-11-28 Mon 17:30]--[2016-11-28 Mon 17:32] =>  0:02
     :END:
-** TODO Categories [0/6]
+** TODO Categories [1/6]
    :LOGBOOK:
    CLOCK: [2016-11-28 Mon 20:00]--[2016-11-28 Mon 21:00] =>  1:00
    :END:
-*** TODO Flesh out the CatsController
+*** DONE Flesh out the CatsController
     :LOGBOOK:
     CLOCK: [2016-11-28 Mon 17:32]--[2016-11-28 Mon 17:42] =>  0:10
     :END:
@@ -53,7 +53,7 @@ BREAKS:
 *** TODO A Category Can Have Many Products
 ** TODO Products [0/1]
 *** TODO Products should have the following:
-*** Name, Description, Cat ID, User ID, TIMESTAMPS.
+*** Name, Description, Price, Cat ID, Slug, TIMESTAMPS,
 ** TODO Search [0/1]
 *** TODO Search Should be able to sift through the database and search through categories.
 ** TODO Checkout [0/4]

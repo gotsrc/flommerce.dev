@@ -464,3 +464,129 @@ Stack trace:
 2016/11/28 20:23:43 [error] 1771#1771: *183 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'App\Http\Controllers\CatsController\Controller' not found in /srv/http/flommerce.dev/app/Http/Controllers/CatsController.php on line 7" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /cats/all HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
 2016/11/28 20:23:44 [error] 1771#1771: *183 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'App\Http\Controllers\CatsController\Controller' not found in /srv/http/flommerce.dev/app/Http/Controllers/CatsController.php on line 7" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /cats/all HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
 2016/11/28 20:23:55 [error] 1771#1771: *183 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'App\Http\Controllers\CatsController\Controller' not found in /srv/http/flommerce.dev/app/Http/Controllers/CatsController.php on line 7" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /cats HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:52:32 [error] 329#329: *539 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:52:33 [error] 329#329: *539 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:54:26 [error] 329#329: *542 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:54:30 [error] 329#329: *542 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/ HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:54:32 [error] 329#329: *542 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:55:15 [error] 329#329: *542 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:55:17 [error] 329#329: *542 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:08 [error] 329#329: *550 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:14 [error] 329#329: *550 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:14 [error] 329#329: *550 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET /categories/create HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:39 [error] 329#329: *550 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:41 [error] 329#329: *558 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:42 [error] 329#329: *560 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:42 [error] 329#329: *562 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:42 [error] 329#329: *564 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:57:43 [error] 329#329: *574 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\FormFacade' in /srv/http/flommerce.dev/config/app.php:228
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illumin" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:59:13 [error] 329#329: *576 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\HtmlServiceProvider' in /srv/http/flommerce.dev/config/app.php:165
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/sr" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
+2016/11/29 15:59:14 [error] 329#329: *576 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Illuminate\Html\HtmlServiceProvider' in /srv/http/flommerce.dev/config/app.php:165
+Stack trace:
+#0 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(60): require()
+#1 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(38): Illuminate\Foundation\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\Foundation\Application), Object(Illuminate\Config\Repository))
+#2 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\LoadConfiguration->bootstrap(Object(Illuminate\Foundation\Application))
+#3 /srv/http/flommerce.dev/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(254): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /srv/http/flommerce.dev/vendor/laravel/framework/sr" while reading response header from upstream, client: 127.0.0.1, server: www.flommerce.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php-fpm/php-fpm.sock:", host: "flommerce.dev"
