@@ -35,6 +35,7 @@ class ProductsController extends Controller
     //
     public function create()
     {
+        $this->middleware('auth');
         return view('products.create');
     }
 
