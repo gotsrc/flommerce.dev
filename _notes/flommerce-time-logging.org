@@ -35,32 +35,54 @@ BREAKS:
     :LOGBOOK:
     CLOCK: [2016-11-28 Mon 17:30]--[2016-11-28 Mon 17:32] =>  0:02
     :END:
-** TODO Categories [1/6]
+** TODO Categories [4/6]
    :LOGBOOK:
    CLOCK: [2016-11-28 Mon 20:00]--[2016-11-28 Mon 21:00] =>  1:00
    :END:
 *** DONE Flesh out the CatsController
     :LOGBOOK:
-    CLOCK: [2016-11-28 Mon 17:32]--[2016-11-28 Mon 17:42] =>  0:10
+    CLOCK: [2016-11-29 Tue 12:30]--[2016-11-29 Tue 13:00] =>  0:30
     :END:
 *** TODO Categories can have many child categories.
-*** TODO Each Category should be Unique and have an ID assigned.
-*** TODO Categories don't need to be dated or timed.
-*** TODO Category should have a description
+    :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 13:00]--[2016-11-29 Tue 13:10] =>  0:10
+    :END:
+*** DONE Each Category should be Unique and have an ID assigned.
+    :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 13:10]--[2016-11-29 Tue 13:20] =>  0:10
+    :END:
+*** DONE Categories don't need to be dated or timed.
+    :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 13:20]--[2016-11-29 Tue 13:40] =>  0:20
+    :END:
+*** DONE Category should have a description
+    :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 13:40]--[2016-11-29 Tue 14:00] =>  0:20
+    :END:
 *** TODO Category should have a slug for SEO.
-** TODO Category Listings [0/3]
-*** TODO Category Listing should grab the ID of a child category and list all products
-*** TODO A Category Can Have Many Products
-** TODO Products [0/1]
-*** TODO Products should have the following:
-*** Name, Description, Price, Cat ID, Slug, TIMESTAMPS,
-** TODO Search [0/1]
-*** TODO Search Should be able to sift through the database and search through categories.
-** TODO Checkout [0/4]
+    :LOGBOOK:
+    CLOCK: [2016-11-30 Wed 11:46]--[2016-11-30 Wed 11:46] =>  0:00
+    :END:
+** TODO Category Listings [2/3]
+*** DONE Category Listing should grab the ID of a child category and list all products
+     :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 15:00]--[2016-11-29 Tue 16:00] =>  1:00
+    :END:
+*** DONE A Category Can Have Many Products
+    :LOGBOOK:
+    CLOCK: [2016-11-29 Tue 19:00]--[2016-11-29 Tue 22:00] =>  3:00
+    :END:
+**** Time is due to bug fixing and researching. 
+** TODO Products [1/1]
+*** DONE Name, Description, Price, Cat ID, Slug, TIMESTAMPS,
+     :LOGBOOK:
+     CLOCK: [2016-11-29 Tue 22:00]--[2016-11-29 Tue 23:00] =>  1:00
+     :END:
+** TODO Checkout [0/2]
 *** TODO User should be able to review their purchase before clicking the continue button.
 *** TODO Once reviewed process fake payment so Order Success can return true or false
 ** TODO Order Success [0/3]
-*** TODO If order success returns true forward them to the homepage.
+*** TODO If order success returns true forward them to order success page.
 *** TODO If order success returns false send them back to the page they were at and show errors.
 *** TODO Email the User upon Order Success
 ** TODO Write Tests [0/6]
