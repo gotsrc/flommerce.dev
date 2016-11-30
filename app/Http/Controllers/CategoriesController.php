@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests;
+use App\Http\Requests\CategoryRequest;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Http\Requests\CreateCategoryRequest;
 
 class CategoriesController extends Controller
 {
@@ -46,10 +45,24 @@ class CategoriesController extends Controller
     // @param CreateCategoryRequest
     // @return Response
     //
-    public function store(CreateCategoryRequest $request)
+    public function store(CategoryRequest $request)
     {
         Category::create($request->all());
 
         return redirect('categories');
+    }
+
+    public function edit($id)
+    {
+        $category = Category::findOrFail($id);
+
+        return view('categories.edit', compact('category'));
+    }
+
+    public function update($id, CategoryRequest $request)
+    {
+        $category = Category::findOrFail($id);
+
+        $category->update($request->all());
     }
 }
