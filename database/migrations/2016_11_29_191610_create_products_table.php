@@ -21,11 +21,11 @@ class CreateProductsTable extends Migration
         Schema::Create('products', function (Blueprint $table)
         {
             $table->increments('id')->unsigned()->index();
-            $table->integer('category_id')->unique()->index();
+            $table->integer('category_id')->index();
             $table->string('title')->unique();
             $table->text('description');
             $table->decimal('price', 10, 2);
-            $table->boolean('sale')->nullable();
+            $table->boolean('sale')->default('0');
             $table->string('slug')->unique();
             $table->timestamps();
         });

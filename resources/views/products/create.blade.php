@@ -34,7 +34,7 @@
         <!-- Is the Item in the Sale? -->
         <p>
             {!! Form::label('sale', 'In the Sale?') !!}
-            {!! Form::checkbox('sale', 0, false, ['class' => 'field']) !!}
+            {!! Form::checkbox('sale', '1', null, ['class' => 'field']) !!}
         </p>
 
         <!-- Provide the slug. A slug is what the browser will read for SEO. -->
@@ -49,4 +49,12 @@
         </p>
     <!-- Close the form -->
     {!! Form::close() !!}
+
+    @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 @stop

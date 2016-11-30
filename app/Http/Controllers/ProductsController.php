@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Request;
+use App\Http\Requests\CreateProductRequest;
 
 class ProductsController extends Controller
 {
@@ -42,11 +42,9 @@ class ProductsController extends Controller
     // Store the data after user input and send the user
     // back to the products page to review.
     //
-    public function store()
+    public function store(CreateProductRequest $request)
     {
-        $input = Request::all();
-
-        Product::create($input);
+        Product::create($request->all());
 
         return redirect('products');
     }

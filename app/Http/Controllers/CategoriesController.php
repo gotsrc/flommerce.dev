@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Request;
+use Illuminate\Http\Request;
+use App\Http\Requests\CreateCategoryRequest;
 
 class CategoriesController extends Controller
 {
@@ -26,9 +26,8 @@ class CategoriesController extends Controller
     public function show($id)
     {
         $category = Category::findOrFail($id);
-        $product = Product::findOrFail($id);
 
-        return view('categories.show', compact('category', 'product'));
+        return view('categories.show', compact('category'));
     }
 
     //
@@ -44,11 +43,12 @@ class CategoriesController extends Controller
     // Store the data after user input and send the user
     // back to the categories page to review.
     //
-    public function store()
+    // @param CreateCategoryRequest
+    // @return Response
+    //
+    public function store(CreateCategoryRequest $request)
     {
-        $input = Request::all();
-
-        Category::create($input);
+        Category::create($request->all());
 
         return redirect('categories');
     }
