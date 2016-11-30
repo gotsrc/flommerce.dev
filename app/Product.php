@@ -14,4 +14,15 @@ class Product extends Model
         'sale',
         'slug',
     ];
+
+    /**
+     *
+     * A Category can have many products.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function categories()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }

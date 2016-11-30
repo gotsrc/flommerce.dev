@@ -15,6 +15,14 @@ class Category extends Model
         'slug'
     ];
 
-
-
+    /**
+     *
+     * A product belongs to a Category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function products()
+    {
+        return $this->hasMany('App\Product');
+    }
 }
