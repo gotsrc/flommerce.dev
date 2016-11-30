@@ -17,6 +17,7 @@
         @endif
     </p>
     <p>
-        <a href="{{ url()->previous() }}" class="btn btn-info">Back</a>
+        <a href="{{ url('/products/' . $product->id . '/purchase') }}" class="btn btn-success">Purchase</a>
+        <a href="{{ url('/products') }}" class="btn btn-info">Back</a>
     </p>
 @stop

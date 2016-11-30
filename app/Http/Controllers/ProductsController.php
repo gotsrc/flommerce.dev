@@ -63,4 +63,11 @@ class ProductsController extends Controller
 
         $product->update($request->all());
     }
+
+    public function purchase($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('orders.create', compact('product'));
+    }
 }

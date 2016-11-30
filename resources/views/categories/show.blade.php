@@ -20,7 +20,7 @@
                 <span class="badge">{{ $product->price }}</span>
             </div>
             <div class="panel-footer">
-                <a href="#" class="btn btn-success">Purchase Item</a>
+                <a href="{{ url('/products/' . $product->id . '/purchase') }}" class="btn btn-success">Purchase Item</a>
             </div>
         </div>
         @endforeach
