@@ -6,7 +6,7 @@
     <hr />
     <!-- Create the form -->
     {!! Form::open(['url' => 'products']) !!}
-        @include ('products.form', ['submitButtonText' => 'Add Product']))
+        @include ('products.form', ['submitButtonText' => 'Add Product'])
     <!-- Close the form -->
     {!! Form::close() !!}
 

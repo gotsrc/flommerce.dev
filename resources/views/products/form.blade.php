@@ -25,7 +25,7 @@
 <!-- Is the Item in the Sale? -->
 <p>
     {!! Form::label('sale', 'In the Sale?') !!}
-    {!! Form::checkbox('sale', old('sale'), null, ['class' => 'field']) !!}
+    {!! Form::text('sale', old('sale'), ['class' => 'form-control', 'maxlength' => '1']) !!}
 </p>
 
 <!-- Provide the slug. A slug is what the browser will read for SEO. -->
