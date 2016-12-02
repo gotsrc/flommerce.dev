@@ -17,7 +17,11 @@
         @endif
     </p>
     <p>
-        <a href="{{ url('/products/' . $product->id . '/purchase') }}" class="btn btn-success">Purchase</a>
-        <a href="{{ url('/products') }}" class="btn btn-info">Back</a>
+        <form action="{{ url('/products/' . $product->id . '/purchase') }}" method="POST">
+            <input type="hidden" id="identifier" value="{!! $product->id !!}">
+            <input type="hidden" id="csrf_token" name="_token" value="{{ csrf_token() }}">
+            <input type="quantity" id="quantity" class="" name="quantity" value="1">
+            <button type="submit" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+        </form>
     </p>
 @stop

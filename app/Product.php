@@ -26,4 +26,15 @@ class Product extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function getBuyableIdentifier($options = null){
+        return $this->id;
+    }
+
+    public function getBuyableDescription(){
+        return $this->name;
+    }
+
+    public function getBuyablePrice(){
+        return $this->price;
+    }
 }

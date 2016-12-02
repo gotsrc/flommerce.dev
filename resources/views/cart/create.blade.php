@@ -7,8 +7,8 @@
     <p><strong>Price:</strong> {!! $product->price !!}</p>
     <p><s
     <hr />
-    {!! Form::open(['url' => 'orders']) !!}
-        @include ('orders.form', ['submitButtonText' => 'Checkout'])
+    {!! Form::open(['url' => '/cart/add']) !!}
+        @include ('cart.form', ['submitButtonText' => 'Checkout'])
     {!! Form::close() !!}
 
     @include('errors.list')

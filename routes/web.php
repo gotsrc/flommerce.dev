@@ -12,14 +12,11 @@
 */
 
 /* RESTful Route Model Binding. */
-Route::get('/', 'CategoriesController@index');
-Route::get('/home', 'HomeController@index');
-Route::resource('categories', 'CategoriesController');
-Route::get('/products/{product}/purchase', 'ProductsController@purchase');
-Route::resource('products', 'ProductsController');
-
-Route::resource('orders','OrdersController');
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+Route::get('/', 'CategoriesController@index');
+Route::resource('products', 'ProductsController');
+Route::resource('cart','CartsController');
+Route::resource('categories', 'CategoriesController');
+
+Route::post('/products/{product}/purchase', 'ProductsController@purchase');

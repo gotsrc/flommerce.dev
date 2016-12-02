@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use App\Product;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Request;
 use App\Http\Requests\ProductRequest;
 use App\Http\Controllers\Controller;
 
@@ -50,24 +52,35 @@ class ProductsController extends Controller
         return redirect('products');
     }
 
+    public function purchase($id, ProductRequest $product, CartRequest $item)
+    {
+        $id = $product->id;
+        $product = Product::find($product->id);
+        dd($product);
+        $quantity = Input::get('quantity');
+        Cart::add(array(
+            'id'    => $product->id,
+            'name'  =>  $product->name,
+            'price' =>  $product->price,
+            'quantity'   =>  $quantity
+        ));
+
+        $content = Cart::content();
+        #dd($content);
+        #return view('cart.index', compact('content'), array('id'=>Auth::id()));
+    }
     public function edit($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
 
         return view('products.edit', compact('product'));
     }
 
     public function update($id, ProductRequest $request)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
 
         $product->update($request->all());
     }
 
-    public function purchase($id)
-    {
-        $product = Product::findOrFail($id);
-
-        return view('orders.create', compact('product'));
-    }
 }
