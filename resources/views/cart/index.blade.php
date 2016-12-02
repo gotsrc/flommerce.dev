@@ -6,8 +6,9 @@
     <h1>Cart</h1>
     <hr />
 
-    @if (count ($cart))
-    <table class="table table-responsive table-consdensed">
+    @if (sizeof(Cart::content()) > 0)
+    <h2>You have items in your cart.</h2>
+    <table class="table table-info">
         <thead>
             <tr>
                 <th>Product</th>
@@ -19,31 +20,35 @@
         <tbody>
             @foreach (Cart::content() as $row)
                 <tr>
-                    <td>{{ $row->title }}</td>
-                    <td>{{ $row->quantity }}</td>
-                    <td>{{ $row->price }}</td>
-                    <td>{{ $row->total }}</td>
+                    <td>
+                        {{ $row->name}}
+                        <a href="/cart/{!! $row->id !!}/remove"<i class="fa fa-remove"></i></a>
+                    </td>
+                    <td>{{ $row->qty }}</td>
+                    <td>&pound; {{ $row->price }}</td>
+                    <td>&pound; {{ $row->total }}</td>
                 </tr>
             @endforeach
         </tbody>
         <tfoot>
             <tr>
                 <td colspan="2">&nbsp;</td>
-                <td>Subtotal</td>
-                <td>{{ Cart::subtotal() }}</td>
+                <td><strong>Subtotal</strong></td>
+                <td>&pound;{{ Cart::subtotal() }}</td>
             </tr>
             <tr>
                 <td colspan="2">&nbsp;</td>
-                <td>Tax</td>
-                <td>{{ Cart::tax() }}</td>
+                <td><strong>Tax</strong></td>
+                <td>&pound;{{ Cart::tax() }}</td>
             </tr>
             <tr>
                 <td colspan="2">&nbsp;</td>
-                <td>Total</td>
-                <td>{{ Cart::total() }}</td>
+                <td><strong>Total</strong></td>
+                <td>&pound; {{ Cart::total() }}</td>
             </tr>
         </tfoot>
     </table>
+    <a href="/cart/checkout" class="btn btn-success">Checkout</a>
     @endif
 </section>
 @stop

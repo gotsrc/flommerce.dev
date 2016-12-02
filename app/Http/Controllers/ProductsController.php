@@ -52,22 +52,23 @@ class ProductsController extends Controller
         return redirect('products');
     }
 
-    public function purchase($id, ProductRequest $product, CartRequest $item)
+    public function purchase($id, Request $request)
     {
+        $product = Product::findOrFail($id);
         $id = $product->id;
-        $product = Product::find($product->id);
-        dd($product);
-        $quantity = Input::get('quantity');
+        //dd($product);
+        $quantity = Request::get('quantity');
+
         Cart::add(array(
             'id'    => $product->id,
-            'name'  =>  $product->name,
+            'name'  => $product->title,
             'price' =>  $product->price,
-            'quantity'   =>  $quantity
+            'qty'   =>  $quantity
         ));
 
         $content = Cart::content();
-        #dd($content);
-        #return view('cart.index', compact('content'), array('id'=>Auth::id()));
+#dd($content);
+        return view('cart.index', compact('content'));
     }
     public function edit($id)
     {

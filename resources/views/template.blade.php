@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ url('/orders') }}"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -97,5 +97,6 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </body>
 </html>

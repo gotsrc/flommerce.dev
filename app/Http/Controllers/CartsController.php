@@ -16,37 +16,34 @@ class CartsController extends Controller
     public function index()
     {
         $cart = Cart::content();
-        dd($cart);
+
         return view('cart.index', compact('cart'));
     }
 
-    public function show($id)
+    public function getAddToCart(Request $request, $id)
     {
-        $cart = Cart::findOrFail($id);
+        $product = Product::find($id);
 
-        return view('cart.show', compact('cart'));
+        $item = [
+            'id'    => $product->id,
+            'name'  => $product->title,
+            'price' =>  $product->price,
+            'qty'   =>  $quantity
+        ];
+
+        return Cart::store($item);
     }
 
-    public function store(CartRequest $request)
+    public function update($id, Request $request)
     {
-        $item = Cart::item('identifier');
-        $product = Product::findOrFail($id);
+        $cart = Product::findOrFail($id);
 
-        Cart::add([
-                'id' => $product->id,
-                'name' => $product->title,
-                'qty' => $product->quantity,
-                'price' => $product->price
-        ]);
-        $content = Cart::content();
-        dd($content);
-        ## return view('cart.index', ['cart_content' => $content]);
+        $cart->update($request->all());
     }
 
-    public function update($id, OrderRequest $request)
+    public function checkout()
     {
-        $order = Order::findOrFail($id);
 
-        $order->update($request->all());
+        return view('cart.checkout-step-1');
     }
 }
