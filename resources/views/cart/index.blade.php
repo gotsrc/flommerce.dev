@@ -7,8 +7,8 @@
     <hr />
 
     @if (sizeof(Cart::content()) > 0)
-    <h2>You have items in your cart.</h2>
-    <table class="table table-info">
+    <p>You have items in your cart.</p>
+    <table class="table">
         <thead>
             <tr>
                 <th>Product</th>
@@ -22,7 +22,7 @@
                 <tr>
                     <td>
                         {{ $row->name}}
-                        <a href="/cart/{!! $row->id !!}/remove"<i class="fa fa-remove"></i></a>
+                        <a href="/cart/<?=$row->id?>/remove"><i class="fa fa-remove"></i></a>
                     </td>
                     <td>{{ $row->qty }}</td>
                     <td>&pound; {{ $row->price }}</td>
@@ -49,6 +49,8 @@
         </tfoot>
     </table>
     <a href="/cart/checkout" class="btn btn-success">Checkout</a>
+    @else
+    You have no items in your cart.
     @endif
 </section>
 @stop

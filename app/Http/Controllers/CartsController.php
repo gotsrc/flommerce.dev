@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Userr;
+use App\User;
 use Cart;
 use App\Product;
 use App\Http\Requests;
@@ -15,6 +15,7 @@ class CartsController extends Controller
 {
     public function index()
     {
+        $this->middleware('auth');
         $cart = Cart::content();
 
         return view('cart.index', compact('cart'));
@@ -23,6 +24,10 @@ class CartsController extends Controller
     public function getAddToCart(Request $request, $id)
     {
         $product = Product::find($id);
+        $id = Input::get('id');
+        $rows = Cart::content();
+        $rowId = $rows->where('id', $id)->first()->rowId;
+        dd($rowId);
 
         $item = [
             'id'    => $product->id,
@@ -31,19 +36,34 @@ class CartsController extends Controller
             'qty'   =>  $quantity
         ];
 
-        return Cart::store($item);
+        return Cart::store($item)->associate('Products');
+    }
+
+    //
+    // Remove the associated item from the cart by given rowId.
+    //
+    public function remove($id, Request $request)
+    {
+        $product_id = Product::findOrFail($id);
+        $rows = Cart::content();
+        $rowId = $rows->where('id', $id)->first()->rowId;
+
+        Cart::remove($rowId);
+
+        return redirect('/cart');
     }
 
     public function update($id, Request $request)
     {
-        $cart = Product::findOrFail($id);
+        $product_id = Product::findOrFail($id);
+        $rows = Cart::content();
+        $rowId = $rows->where('id', $id)->first()->rowId;
 
-        $cart->update($request->all());
+        return Cart::update($rowId);
     }
 
     public function checkout()
     {
-
         return view('cart.checkout-step-1');
     }
 }

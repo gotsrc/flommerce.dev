@@ -47,16 +47,21 @@ class ProductsController extends Controller
     //
     public function store(ProductRequest $request)
     {
+        $this->middleware('Auth');
+        
         Product::create($request->all());
 
         return redirect('products');
     }
 
+    //
+    // Add the requested item to the cart by id.
+    //
     public function purchase($id, Request $request)
     {
         $product = Product::findOrFail($id);
         $id = $product->id;
-        //dd($product);
+
         $quantity = Request::get('quantity');
 
         Cart::add(array(
@@ -64,14 +69,19 @@ class ProductsController extends Controller
             'name'  => $product->title,
             'price' =>  $product->price,
             'qty'   =>  $quantity
-        ));
+        ))->associate('Product');
 
         $content = Cart::content();
-#dd($content);
-        return view('cart.index', compact('content'));
+
+        return redirect('/cart');
     }
+
+    //
+    // Edit the current product.
+    //
     public function edit($id)
     {
+        $this->middleware('Auth');
         $product = Product::find($id);
 
         return view('products.edit', compact('product'));
@@ -79,6 +89,8 @@ class ProductsController extends Controller
 
     public function update($id, ProductRequest $request)
     {
+        $this->middleware('auth');
+
         $product = Product::find($id);
 
         $product->update($request->all());

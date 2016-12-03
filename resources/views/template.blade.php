@@ -21,8 +21,7 @@
     </script>
 </head>
 <body>
-    <div id="wrapper">
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -42,7 +41,7 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
 
@@ -55,7 +54,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -87,7 +86,6 @@
                         @endif
                     </ul>
                 </div>
-            </div>
         </nav>
         <div class="container">
             @yield('content')

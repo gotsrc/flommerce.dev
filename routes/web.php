@@ -20,3 +20,4 @@ Route::resource('cart','CartsController');
 Route::resource('categories', 'CategoriesController');
 
 Route::post('/products/{product}/purchase', 'ProductsController@purchase');
+Route::get('/cart/{id}/remove', 'CartsController@remove');
