@@ -48,7 +48,7 @@ class ProductsController extends Controller
     public function store(ProductRequest $request)
     {
         $this->middleware('Auth');
-        
+
         Product::create($request->all());
 
         return redirect('products');

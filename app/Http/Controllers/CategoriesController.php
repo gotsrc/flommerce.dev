@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Cart;
 use App\Http\Requests;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Controllers\Controller;
+use Session;
 
 class CategoriesController extends Controller
 {

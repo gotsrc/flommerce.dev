@@ -21,24 +21,6 @@ class CartsController extends Controller
         return view('cart.index', compact('cart'));
     }
 
-    public function getAddToCart(Request $request, $id)
-    {
-        $product = Product::find($id);
-        $id = Input::get('id');
-        $rows = Cart::content();
-        $rowId = $rows->where('id', $id)->first()->rowId;
-        dd($rowId);
-
-        $item = [
-            'id'    => $product->id,
-            'name'  => $product->title,
-            'price' =>  $product->price,
-            'qty'   =>  $quantity
-        ];
-
-        return Cart::store($item)->associate('Products');
-    }
-
     //
     // Remove the associated item from the cart by given rowId.
     //
@@ -52,7 +34,11 @@ class CartsController extends Controller
 
         return redirect('/cart');
     }
+    public function show(Request $request, $id)
+    {
 
+        return view('cart.checkout');
+    }
     public function update($id, Request $request)
     {
         $product_id = Product::findOrFail($id);
@@ -62,8 +48,13 @@ class CartsController extends Controller
         return Cart::update($rowId);
     }
 
-    public function checkout()
+    public function checkout(Request $request)
     {
-        return view('cart.checkout-step-1');
+        $rows = Cart::content();
+        $rowId = $rows->where('id', $id)->first()->rowId;
+
+        $content = Cart::get($rowId);
+        dd($content);
+        return view('cart.checkout', compact('content'));
     }
 }

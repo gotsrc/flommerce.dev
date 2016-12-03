@@ -9,7 +9,7 @@ return [
     | Taxable interface and use the HasTax trait.
     |
     */
-    'tax' => 17.5,
+    'tax' => 20,
     /*
     |--------------------------------------------------------------------------
     | Shoppingcart database settings
