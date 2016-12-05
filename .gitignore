@@ -1,10 +1,11 @@
-/logs
+/logs/*.log
 *.log
 /node_modules
 /public/storage
 /vendor
 /.idea
 /_notes
+/public/pma
 Homestead.json
 Homestead.yaml
 .env

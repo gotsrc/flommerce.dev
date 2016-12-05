@@ -70,7 +70,7 @@ class CartsController extends Controller
         if ($payment == 'SUCCESS') {
             return view('cart.success', compact('content'));
         } else {
-            redirect('/cart/checkout');
+            return view('/cart/checkout', compact('content'));
         }
     }
 }

@@ -23,15 +23,18 @@
 <hr />
 <h4>Card Details</h4>
 <div class="form-group">
-    {!! Form::text('card_number', '', ['class' => 'form-control', 'placeholder' => '0000-0000-0000-0000', 'maxlength' => '19', 'required']) !!}
+    {!! Form::text('card_name', '', ['class' => 'form-control', 'placeholder' => 'Card Name', 'required', 'id' => 'card_name']) !!}
 </div>
 <div class="form-group">
-        {!! Form::text('expiry_month', '', ['class' => 'form-control', 'placeholder' => '01', 'maxlength' => '2', 'required']) !!}
+    {!! Form::text('card_number', '', ['class' => 'form-control', 'placeholder' => '0000-0000-0000-0000', 'maxlength' => '19', 'required', 'id' => 'card_number']) !!}
 </div>
 <div class="form-group">
-    {!! Form::text('expiry_year', '', ['class' => 'form-control', 'placeholder' => '16','maxlength' => '2', 'required']) !!}
+        {!! Form::text('card_expiry_month', '', ['class' => 'form-control', 'placeholder' => '01', 'maxlength' => '2', 'required', 'id' => 'card_expiry_month']) !!}
 </div>
 <div class="form-group">
-    {!! Form::text('cvc', '', ['class' => 'form-control', 'placeholder' => 'CVC (3-Digit Code)','maxlength' => '3', 'required']) !!}
+    {!! Form::text('card_expiry_year', '', ['class' => 'form-control', 'placeholder' => '16','maxlength' => '2', 'required', 'id' => 'card_expiry_year']) !!}
+</div>
+<div class="form-group">
+    {!! Form::text('card_cvc', '', ['class' => 'form-control', 'placeholder' => 'CVC (3-Digit Code)','maxlength' => '3', 'required',  'id' => 'card_cvc']) !!}
 </div>
 <p>{!! Form::submit($submitButtonText, ['class' => 'btn btn-success']) !!}</p>
