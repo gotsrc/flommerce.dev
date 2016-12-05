@@ -3,9 +3,9 @@
 @section('content')
     <h1>Checkout</h1>
     <hr />
-    <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(); ?></p>
+    <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(2); ?></p>
     <hr />
-    <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? '' : 'hidden' }}">
+    <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
         {{ Session::get('error') }}
     </div>
     <!-- Create the form -->

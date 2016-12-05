@@ -61,23 +61,23 @@ class CartsController extends Controller
         $id = Session::get('rowId');
         $items = Cart::content();
         foreach ($items as $item) {
-            $item = $item->rowId;
+            $cart_id = $item->rowId;
         }
 
-
+        $total = Cart::total(2, '', '');
         Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
-            try {
-                Stripe::create(array(
-                    "amount" => totalPrice,
-                    "currency" => "gbp",
-                    "source" => $request->input('stripeToken'),
-                    "description" => "Test Flommerce Charge"
-                ));
-            } catch (\Exception $e) {
-                return redirect()->route('checkout')->with('error', $e->getMessage());
-            }
-                Session::forget('cart');
-                return redirect()->route('/cart/success');
+        try {
+            $charge = \Stripe\Charge::create(array(
+                "amount" => $total,
+                "currency" => "gbp",
+                "source" => $request->input('stripeToken'),
+                "description" => "Test Flommerce Charge"
+            ));
+        } catch (\Exception $e) {
+            return view('cart.checkout')->with('error', $e->getMessage());
+        }
+            Session::forget('cart');
+            return view('cart.success');
     }
 
     // public function postMakePayment(Request $request)
