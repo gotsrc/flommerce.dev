@@ -65,6 +65,7 @@ class CartsController extends Controller
         }
 
         $total = Cart::total(2, '', '');
+
         Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
         try {
             $charge = \Stripe\Charge::create(array(
@@ -79,16 +80,4 @@ class CartsController extends Controller
             Session::forget('cart');
             return view('cart.success');
     }
-
-    // public function postMakePayment(Request $request)
-    // {
-    //     if (!Session::has('cart')) {
-    //         return redirect()->route('/cart');
-    //     }
-    //
-    //     $rows = Cart::content();
-    //     dd($rows);
-    //     $rowId = $rows->where('id', $id)->first()->rowId;
-    //     $content = Cart::get($rowId);
-    // }
 }
