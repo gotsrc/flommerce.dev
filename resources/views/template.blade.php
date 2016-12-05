@@ -20,8 +20,8 @@
         ]); ?>
     </script>
 </head>
-<body>
-        <nav class="navbar navbar-default navbar-static-top">
+<body style="padding-top: 90px;">
+        <nav class="navbar navbar-dark navbar-fixed-top" style="background-color: #242424;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -34,7 +34,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" style="padding-top: 13px;" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart"></i></a></li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

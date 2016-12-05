@@ -13,6 +13,11 @@ use App\Http\Controllers\Controller;
 
 class CartsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        
+    }
     public function index()
     {
         $this->middleware('auth');
@@ -50,11 +55,14 @@ class CartsController extends Controller
 
     public function checkout(Request $request)
     {
+        $this->middleware('auth');
+
         $rows = Cart::content();
         $rowId = $rows->where('id', $id)->first()->rowId;
 
         $content = Cart::get($rowId);
-        dd($content);
+
+        echo $rowId;
         return view('cart.checkout', compact('content'));
     }
 }
