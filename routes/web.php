@@ -22,3 +22,4 @@ Route::resource('categories', 'CategoriesController');
 Route::post('/products/{product}/purchase', 'ProductsController@purchase');
 Route::get('/cart/{id}/remove', 'CartsController@remove');
 Route::get('/cart/checkout', 'CartsController@checkout');
+Route::post('checkout', 'CartsController@postMakePayment');

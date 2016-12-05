@@ -16,7 +16,7 @@ class CartsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        
+
     }
     public function index()
     {
@@ -61,8 +61,16 @@ class CartsController extends Controller
         $rowId = $rows->where('id', $id)->first()->rowId;
 
         $content = Cart::get($rowId);
-
-        echo $rowId;
         return view('cart.checkout', compact('content'));
+    }
+
+    public function postMakePayment()
+    {
+        $payment = "NULL";
+        if ($payment == 'SUCCESS') {
+            return view('cart.success', compact('content'));
+        } else {
+            redirect('/cart/checkout');
+        }
     }
 }
