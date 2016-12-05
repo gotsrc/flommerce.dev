@@ -14,11 +14,5 @@ class Cart extends Model
         if ( ! $content->has($rowId) )
             throw new InvalidRowIDException("The cart does not contain rowId {$rowId}.");
             return $content->get($rowId);
-        }
-
-    }
-    public function addToCart($id)
-    {
-
     }
 }

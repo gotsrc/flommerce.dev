@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\User;
 use Cart;
 use App\Product;
-use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Requests\ProductRequest;
-use App\Http\Requests\CartRequest;
+use App\Http\Requests;
+// use App\Http\Requests\ProductRequest;
+// use App\Http\Requests\CartRequest;
 use App\Http\Controllers\Controller;
+use Session;
+use Stripe\Stripe;
 
 class CartsController extends Controller
 {
@@ -56,21 +58,37 @@ class CartsController extends Controller
     public function checkout(Request $request)
     {
         $this->middleware('auth');
-
-        $rows = Cart::content();
-        $rowId = $rows->where('id', $id)->first()->rowId;
-
-        $content = Cart::get($rowId);
-        return view('cart.checkout', compact('content'));
-    }
-
-    public function postMakePayment()
-    {
-        $payment = "NULL";
-        if ($payment == 'SUCCESS') {
-            return view('cart.success', compact('content'));
-        } else {
-            return view('/cart/checkout', compact('content'));
+        $id = Session::get('rowId');
+        $items = Cart::content();
+        foreach ($items as $item) {
+            $item = $item->rowId;
         }
+
+
+        Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
+            try {
+                Stripe::create(array(
+                    "amount" => totalPrice,
+                    "currency" => "gbp",
+                    "source" => $request->input('stripeToken'),
+                    "description" => "Test Flommerce Charge"
+                ));
+            } catch (\Exception $e) {
+                return redirect()->route('checkout')->with('error', $e->getMessage());
+            }
+                Session::forget('cart');
+                return redirect()->route('/cart/success');
     }
+
+    // public function postMakePayment(Request $request)
+    // {
+    //     if (!Session::has('cart')) {
+    //         return redirect()->route('/cart');
+    //     }
+    //
+    //     $rows = Cart::content();
+    //     dd($rows);
+    //     $rowId = $rows->where('id', $id)->first()->rowId;
+    //     $content = Cart::get($rowId);
+    // }
 }
