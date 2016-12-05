@@ -37,4 +37,5 @@
 <div class="form-group">
     {!! Form::text('card_cvc', '', ['class' => 'form-control', 'placeholder' => 'CVC (3-Digit Code)','maxlength' => '3', 'required',  'id' => 'card_cvc']) !!}
 </div>
+{{ csrf_field() }}
 <p>{!! Form::submit($submitButtonText, ['class' => 'btn btn-success']) !!}</p>

@@ -5,9 +5,13 @@
     <hr />
     <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(); ?></p>
     <hr />
+    <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? '' : 'hidden' }}">
+        {{ Session::get('error') }}
+    </div>
     <!-- Create the form -->
     {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'id' => 'checkout_form']) !!}
         @include ('cart.form', ['submitButtonText' => 'Checkout'])
+
     <!-- Close the form -->
     {!! Form::close() !!}
 
