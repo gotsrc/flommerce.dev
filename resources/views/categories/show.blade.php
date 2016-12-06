@@ -3,19 +3,19 @@
 @section('content')
     <h1><a href="{{ url('/categories') }}">Category</a>: <small>{{ $category->title }}</small></h1>
     <hr />
-    <p>{{ $category->description }}</p>
+    <p class="lead">{{ $category->description }}</p>
 
         @foreach ($category->products as $product)
         <div class="card card-default">
-            <div class="card-heading">
-                <a href="{{ url('/products', $product->id) }}">{{ $product->title }}</a>
+            <h5 class="card-header">
+                <a href="{{ url('/products', $product->id) }}" class="pull-left">{{ $product->title }}</a>
                 @if ($product->sale != 1)
 
                 @else
-                    <p class="label label-success">Sale Item</p>
+                    <span class="tag tag-pill tag-success pull-right">Sale Item</span>
                 @endif
-            </div>
-            <div class="card-body">
+            </h5>
+            <div class="card-block">
                 <p>{{ $product->description }}</p>
                 <span class="badge">{{ $product->price }}</span>
             </div>

@@ -1,17 +1,17 @@
 @extends('template')
 
 @section('content')
-    <h1>Checkout</h1>
-    <hr />
-    <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(2); ?></p>
-    <hr />
-    <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
-        {{ Session::get('error') }}
-    </div>
+    <div class="card">
+        <h4 class="card-header">Checkout</h4>
+        <div class="card-block">
+            <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(2); ?></p>
+            <hr />
+            <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden-sm-up' : '' }}">
+                {{ Session::get('error') }}
+            </div>
     <!-- Create the form -->
     {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'id' => 'checkout_form']) !!}
         @include ('cart.form', ['submitButtonText' => 'Checkout'])
-
     <!-- Close the form -->
     {!! Form::close() !!}
 

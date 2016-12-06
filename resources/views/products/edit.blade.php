@@ -1,14 +1,17 @@
 @extends('template')
 
 @section('content')
-    <h1>Editing: <small>{!! $product->title !!}</small></h1>
+<div class="card">
+<h4 class="card-header">Editing: <small>{!! $product->title !!}</small></h4>
 
-    <hr />
-    <!-- Create the form -->
-    {!! Form::model($product, ['method' => 'PATCH', 'action' => ['ProductsController@update', $product->id]]) !!}
-        @include ('products.form', ['submitButtonText' => 'Edit Product'])
-    <!-- Close the form -->
-    {!! Form::close() !!}
+<div class="card-block">
+<!-- Create the form -->
+{!! Form::model($product, ['method' => 'PATCH', 'action' => ['ProductsController@update', $product->id]]) !!}
+@include ('products.form', ['submitButtonText' => 'Edit Product'])
+<!-- Close the form -->
+{!! Form::close() !!}
 
-    @include ('errors.list')
+@include ('errors.list')
+</div>
+</div>
 @stop

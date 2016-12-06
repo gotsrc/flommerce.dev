@@ -14,6 +14,7 @@
 /* RESTful Route Model Binding. */
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+Route::get('/logout' , 'Auth\LoginController@logout');
 Route::get('/', 'CategoriesController@index');
 Route::resource('products', 'ProductsController');
 Route::resource('cart','CartsController');

@@ -1,14 +1,16 @@
 @extends('template')
 
 @section('content')
-    <h1>Create a Product</h1>
+<div class="card">
+<h4 class="card-header">Create a Product</h4>
+<div class="card-block">
+<!-- Create the form -->
+{!! Form::open(['url' => 'products']) !!}
+@include ('products.form', ['submitButtonText' => 'Add Product'])
+<!-- Close the form -->
+{!! Form::close() !!}
 
-    <hr />
-    <!-- Create the form -->
-    {!! Form::open(['url' => 'products']) !!}
-        @include ('products.form', ['submitButtonText' => 'Add Product'])
-    <!-- Close the form -->
-    {!! Form::close() !!}
-
-    @include('errors.list')
+@include('errors.list')
+</div>
+</div>
 @stop

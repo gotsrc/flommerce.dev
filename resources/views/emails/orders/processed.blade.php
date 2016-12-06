@@ -2,6 +2,6 @@
 
 @section('content')
 
-    <!-- Stuff Here. -->
+<!-- Stuff Here. -->
 
 @endsection

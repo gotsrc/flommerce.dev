@@ -1,14 +1,16 @@
 @extends('template')
 
 @section('content')
-    <h1>Create a Category</h1>
+<div class="card">
+<h4 class="card-header">Create a Category</h4>
+<div class="card-block">
+<!-- Create the form -->
+{!! Form::open(['url' => 'categories']) !!}
+@include ('categories.form', ['submitButtonText' => 'Add Category'])
+<!-- Close the form -->
+{!! Form::close() !!}
 
-    <hr />
-    <!-- Create the form -->
-    {!! Form::open(['url' => 'categories']) !!}
-        @include ('categories.form', ['submitButtonText' => 'Add Category'])
-    <!-- Close the form -->
-    {!! Form::close() !!}
-
-    @include('errors.list')
+@include('errors.list')
+</div>
+</div>
 @stop
