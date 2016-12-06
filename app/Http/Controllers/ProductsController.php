@@ -57,7 +57,7 @@ class ProductsController extends Controller
     //
     // Add the requested item to the cart by id.
     //
-    public function purchase($id, Request $request)
+    public function postPurchaseProduct($id, Request $request)
     {
         $product = Product::findOrFail($id);
         $id = $product->id;

@@ -19,7 +19,8 @@ Route::resource('products', 'ProductsController');
 Route::resource('cart','CartsController');
 Route::resource('categories', 'CategoriesController');
 
-Route::post('/products/{product}/purchase', 'ProductsController@purchase');
-Route::get('/cart/{id}/remove', 'CartsController@remove');
-Route::get('/cart/checkout', 'CartsController@checkout');
-Route::post('checkout', 'CartsController@checkout');
+Route::post('/products/{product}/purchase', 'ProductsController@postPurchaseProduct')->middleware('auth');
+Route::get('/cart/{id}/remove', 'CartsController@getRemoveCartItem');
+Route::get('/cart/checkout', 'CartsController@getCheckout');
+Route::post('checkout', 'CartsController@postCheckout');
+Route::get('/checkout/success', 'CartsController@getCheckoutSuccess');

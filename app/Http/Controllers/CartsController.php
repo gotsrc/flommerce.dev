@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Cart;
+use App\User;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -31,7 +31,7 @@ class CartsController extends Controller
     //
     // Remove the associated item from the cart by given rowId.
     //
-    public function remove($id, Request $request)
+    public function getRemoveCartItem($id, Request $request)
     {
         $product_id = Product::findOrFail($id);
         $rows = Cart::content();
@@ -41,11 +41,13 @@ class CartsController extends Controller
 
         return redirect('/cart');
     }
+
     public function show(Request $request, $id)
     {
 
         return view('cart.checkout');
     }
+
     public function update($id, Request $request)
     {
         $product_id = Product::findOrFail($id);
@@ -55,7 +57,7 @@ class CartsController extends Controller
         return Cart::update($rowId);
     }
 
-    public function checkout(Request $request)
+    public function postCheckout(Request $request)
     {
         $this->middleware('auth');
         $id = Session::get('rowId');
@@ -78,6 +80,14 @@ class CartsController extends Controller
             return view('cart.checkout')->with('error', $e->getMessage());
         }
             Session::forget('cart');
-            return view('cart.success');
+            Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
+            return redirect('/checkout/success');
+
+    }
+
+    public function getCheckoutSuccess()
+    {
+        return view('cart.success');
+        return redirect()->url('/');
     }
 }
