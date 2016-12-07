@@ -2,4 +2,8 @@
 @import "variables";
 @import "node_modules/bootstrap/scss/bootstrap";
 
-.navbar-brand { color: $navbar-brand !important; }
+.navbar { border-radius: 0; }
+.navbar-default-bg { background-color: $navbar-default-bg; }
+
+.section-top-margin { margin-top: $section-top-margin; }
+.jumbotron { border-bottom: 1px solid #ccc; }

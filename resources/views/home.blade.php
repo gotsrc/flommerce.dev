@@ -1,12 +1,13 @@
 @extends('flommerce')
 
 @section('content')
-<div class="col-md-12">
-    <div class="card">
-        <h4 class="card-header">Hello, Guest!</h4>
-        <div class="card-block">
-            Welcome to Flommerce. Please have a nice poke about.
+<section id="home" class="jumbotron text-xs-center">
+    <div class="row">
+        <div class="container">
+            <h2 class="display-3">Hello, Guest!</h2>
+            <hr />
+            <p class="lead">Welcome to Flommerce. Please have a nice poke about.</p>
         </div>
     </div>
-</div>
+</section>
 @endsection

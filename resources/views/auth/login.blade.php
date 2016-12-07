@@ -3,7 +3,7 @@
 @section('content')
 <div class="col-md-6 offset-md-3">
     <div class="card">
-        <h4 class="card-header">Login</h4>
+        <h3 class="card-header">Login</h3>
 
         <div class="card-block">
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">

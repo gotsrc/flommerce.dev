@@ -8,7 +8,6 @@ $list-group-border: $laravel-border-color;
 $navbar-default-border: $laravel-border-color;
 $panel-default-border: $laravel-border-color;
 $panel-inner-border: $laravel-border-color;
-
 // Brands
 $brand-primary: #e8289a;
 $brand-info: #8eb4cb;
@@ -21,8 +20,11 @@ $line-height-base: 1.6;
 $text-color: #636b6f;
 
 // Navbar
-$navbar-default-bg: #fff;
+$navbar-default-bg: lighten(#E8289A, 30%);
 $navbar-brand: #e8289a;
+
+// Sections
+$section-top-margin: 35px;
 // Buttons
 $btn-default-color: $text-color;
 
@@ -32,4 +34,4 @@ $input-border-focus: lighten($brand-primary, 25%);
 $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
-$panel-default-heading-bg: #fff;
+$card-default-heading-bg: #fff;

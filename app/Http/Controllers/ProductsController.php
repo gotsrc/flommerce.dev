@@ -86,6 +86,8 @@ class ProductsController extends Controller
         $product = Product::find($id);
 
         $product->update($request->all());
+
+        return view('products.show', compact('product'));
     }
 
 }

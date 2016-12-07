@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Cart;
 use App\User;
 use App\Product;
+// use App\Cart;
+use Cart;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-// use App\Http\Requests\ProductRequest;
-// use App\Http\Requests\CartRequest;
 use App\Http\Controllers\Controller;
 use Session;
 use Stripe\Stripe;

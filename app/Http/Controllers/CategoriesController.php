@@ -66,6 +66,6 @@ class CategoriesController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        $category->update($request->all());
+        return $category->update($request->all());
     }
 }

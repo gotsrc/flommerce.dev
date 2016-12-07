@@ -9,8 +9,8 @@
 
         <title>{{ config('app.name', 'Flommerce') }}</title>
     </head>
-    <body style="padding-top: 95px;">
-        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+    <body>
+        <nav class="navbar navbar-light navbar-default-bg navbar-static-top">
             <div class="container">
 
                 <button class="navbar-toggler hidden-lg-up" type="button"
@@ -53,7 +53,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="responsiveNavbarDropdown">
                                         <li>
-                                            <a href="{{ url('/home') }}" class="dropdown-item">
+                                            <a href="{{ url('/') }}" class="dropdown-item">
                                                 <i class="fa fa-dashboard"></i>
                                                 Dashboard
                                             </a>

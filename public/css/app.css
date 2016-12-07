@@ -6637,8 +6637,20 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
-.navbar-brand {
-  color: #e8289a !important;
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default-bg {
+  background-color: #f7b2db;
+}
+
+.section-top-margin {
+  margin-top: 35px;
+}
+
+.jumbotron {
+  border-bottom: 1px solid #ccc;
 }
 
 /*# sourceMappingURL=app.css.map */

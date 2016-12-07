@@ -1,7 +1,8 @@
 @extends('flommerce')
 
 @section('content')
-<h1>Purchase {!! $product->title !!}</h1>
+<section id="purchase_product">
+    <h3 class="card-header">Purchase {!! $product->title !!}</h1></h3>
 <hr />
 <p><strong>Product description:</strong> {!! $product->description !!}</p>
 <p><strong>Price:</strong> {!! $product->price !!}</p>

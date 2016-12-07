@@ -16,6 +16,11 @@
 {!! Form::textarea('description', old('description'), ['class' => 'form-control']) !!}
 </p>
 
+<!-- Use a path from Public to Display image. -->
+<p>
+    {!! Form::label('img_path', 'Feature Image:') !!}
+    {!! Form::text('img_path', old('img_path'), ['class' => 'form-control']) !!}
+</p>
 <!-- Set a Price for the Item -->
 <p>
 {!! Form::label('price', 'Price &pound;:') !!}

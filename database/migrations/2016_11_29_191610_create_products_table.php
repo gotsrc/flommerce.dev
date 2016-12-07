@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->index();
             $table->string('title')->unique();
             $table->text('description');
+            $table->string('img_path');
             $table->decimal('price', 10, 2);
             $table->boolean('sale')->default('0');
             $table->string('slug')->unique();
@@ -38,6 +39,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('products');
+        Schema::dropIfExists('products');
     }
 }
