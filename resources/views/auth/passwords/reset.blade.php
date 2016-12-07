@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('flommerce')
 
 @section('content')
 <div class="container">

@@ -1,7 +1,7 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
-<div class="col-md-12">
+<div class="col-md-6 offset-md-3">
     <div class="card">
         <h4 class="card-header">Login</h4>
 
@@ -43,7 +43,6 @@
                         </div>
                     </div>
 
-                </form>
             </div>
 
             <div class="card-footer">
@@ -54,6 +53,7 @@
                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                     Forgot Your Password?
                 </a>
+            </form>
             </div>
         </div>
         </div>

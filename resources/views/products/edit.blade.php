@@ -1,4 +1,4 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
 <div class="card">

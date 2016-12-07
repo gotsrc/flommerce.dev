@@ -1,16 +1,19 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
-<h1>Categories</h1>
-<hr />
-<dl>
-@foreach ($categories as $category)
-<dt>
-<a href="{{ url('/categories', $category->id) }}">{{ $category->title }}</a>
-</dt>
-<dd>
-{{ $category->description }}
-</dd>
-@endforeach
-</dl>
+<div class="card">
+
+<h4 class="card-header">Categories</h4>
+<div class="card-block">
+    <ul class="nav navbar-nav list-group-inline">
+        @foreach ($categories as $category)
+        <li class="list-group-item">
+            <a href="{{ url('/categories', $category->id) }}">{{ $category->title }}</a>
+            <dd>
+                {{ $category->description }}
+            </dd>
+        </li>
+        @endforeach
+    </ul>
+</div>
 @endsection

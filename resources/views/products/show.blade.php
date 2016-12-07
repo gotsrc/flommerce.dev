@@ -1,4 +1,4 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
 <div class="card">
@@ -30,4 +30,4 @@
             <button type="submit" class="btn btn-success pull-right"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
         </form>
     </div>
-@stop
+@endsection

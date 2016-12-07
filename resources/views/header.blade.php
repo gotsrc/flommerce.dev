@@ -8,18 +8,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Flommerce') }}</title>
-
-        <!-- Styles -->
-        <link href="/css/app.css" rel="stylesheet">
-        <!-- Scripts -->
-        <script>
-            window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-            ]); ?>
-        </script>
     </head>
     <body style="padding-top: 95px;">
-        <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
             <div class="container">
 
                 <button class="navbar-toggler hidden-lg-up" type="button"
@@ -32,6 +23,11 @@
                         <i class="fa fa-home"></i>
                             {{ config('app.name', 'Flommerce') }}
                     </a>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="nav-item">
+                            <a href="{{ url('/products') }}" class="nav-link">Products</a>
+                        </li>
+                    </ul>
                     <form class="form-inline pull-right">
                         <ul class="nav navbar-nav navbar-right">
                             @if (Auth::guest())
@@ -39,6 +35,12 @@
                                     <a href="{{ url('/login') }}" class="nav-link"><i class="fa fa-power-on"></i>Login</a></li>
                                 <li class="nav-item"><a href="{{ url('/register') }}" class="nav-link">Register</a></li>
                             @else
+                            <li class="nav-item">
+                                <a href="{{ url('/cart') }}" class="nav-link">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Your Cart
+                                </a>
+                            </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle"
                                     href="http://example.com"
@@ -56,12 +58,6 @@
                                                 Dashboard
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="{{ url('/cart') }}" class="dropdown-item">
-                                                <i class="fa fa-shopping-cart"></i>
-                                                Your Cart
-                                            </a>
-                                        <li>
                                         <li>
                                             <a href="{{ url('/categories/create') }}" class="dropdown-item">
                                                 <i class="fa fa-plus-square"></i>
@@ -87,14 +83,3 @@
                 </div>
             </div>
         </nav>
-
-        <div class="container">
-            @yield('content')
-        </div>
-
-        <!-- Scripts -->
-        <script src="/js/app.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        @yield('scripts')
-    </body>
-</html>

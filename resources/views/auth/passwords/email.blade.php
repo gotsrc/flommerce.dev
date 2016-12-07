@@ -1,4 +1,4 @@
-@extends('template')
+@extends('flommerce')
 
 <!-- Main Content -->
 @section('content')

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
 <h1>Purchase {!! $product->title !!}</h1>

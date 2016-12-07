@@ -1,4 +1,4 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
 <!-- Loop over the cart -->

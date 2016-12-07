@@ -1,14 +1,12 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
-<div class="row">
 <div class="col-md-12">
-<div class="card">
-<div class="card-block">
-<h4 class="card-title">Dashboard</h4>
-Welcome to Flommerce. You will be able to track your orders soon.
-</div>
-</div>
-</div>
+    <div class="card">
+        <h4 class="card-header">Hello, Guest!</h4>
+        <div class="card-block">
+            Welcome to Flommerce. Please have a nice poke about.
+        </div>
+    </div>
 </div>
 @endsection

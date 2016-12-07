@@ -1,6 +1,7 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
+<div class="col-md-8 offset-md-2">
     <div class="card">
         <h4 class="card-header">Checkout</h4>
         <div class="card-block">
@@ -9,15 +10,15 @@
             <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden-sm-up' : '' }}">
                 {{ Session::get('error') }}
             </div>
+            {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'id' => 'checkout_form']) !!}
+            @include ('cart.form', ['submitButtonText' => 'Checkout'])
+            <!-- Close the form -->
+            {!! Form::close() !!}
+        </div>
     <!-- Create the form -->
-    {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'id' => 'checkout_form']) !!}
-        @include ('cart.form', ['submitButtonText' => 'Checkout'])
-    <!-- Close the form -->
-    {!! Form::close() !!}
 
     @include('errors.list')
 @endsection
-
 @section('scripts')
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript" src="/js/checkout.js"></script>

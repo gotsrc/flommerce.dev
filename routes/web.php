@@ -13,15 +13,17 @@
 
 /* RESTful Route Model Binding. */
 Auth::routes();
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 Route::get('/logout' , 'Auth\LoginController@logout');
-Route::get('/', 'CategoriesController@index');
 Route::resource('products', 'ProductsController');
 Route::resource('cart','CartsController');
 Route::resource('categories', 'CategoriesController');
 
 Route::post('/products/{product}/purchase', 'ProductsController@postPurchaseProduct')->middleware('auth');
+Route::post('/products/{product}/edit')->middleware('auth');
+Route::get('/categories/{category}/edit')->middleware('auth');
+
 Route::get('/cart/{id}/remove', 'CartsController@getRemoveCartItem');
-Route::get('/cart/checkout', 'CartsController@getCheckout');
+Route::get('/cart/checkout', 'CartsController@getCheckout')->middleware('auth');
 Route::post('checkout', 'CartsController@postCheckout');
 Route::get('/checkout/success', 'CartsController@getCheckoutSuccess');

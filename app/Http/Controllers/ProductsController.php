@@ -11,9 +11,6 @@ use App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {
-    //
-    // Populate the main route with all products. Within the database.
-    //
     public function index()
     {
         $products = Product::all();
@@ -47,8 +44,6 @@ class ProductsController extends Controller
     //
     public function store(ProductRequest $request)
     {
-        $this->middleware('Auth');
-
         Product::create($request->all());
 
         return redirect('products');
@@ -81,7 +76,6 @@ class ProductsController extends Controller
     //
     public function edit($id)
     {
-        $this->middleware('Auth');
         $product = Product::find($id);
 
         return view('products.edit', compact('product'));
@@ -89,8 +83,6 @@ class ProductsController extends Controller
 
     public function update($id, ProductRequest $request)
     {
-        $this->middleware('auth');
-
         $product = Product::find($id);
 
         $product->update($request->all());

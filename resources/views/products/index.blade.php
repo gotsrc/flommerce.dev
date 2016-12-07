@@ -1,12 +1,12 @@
-@extends('template')
+@extends('flommerce')
 
 @section('content')
 <div class="card">
-<h4 class="card-header">Products</h4>
+    <h4 class="card-header">Products</h4>
     <div class="card-block">
         @foreach ($products as $product)
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-sm-6">
+            <div class="card card-default">
 
                 <h6 class="card-header">
                     <a href="{{ url('/products', $product->id) }}">
