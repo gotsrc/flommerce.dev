@@ -1,24 +1,24 @@
 <h5>Address Details:</h5>
     <div class="form-group">
-        {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Full Name', 'required']) !!}
+        {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Full Name', 'required', 'name' => 'name']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('address1', '', ['class' => 'form-control', 'placeholder' => 'Address Line 1', 'required']) !!}
+        {!! Form::text('address1', '', ['class' => 'form-control', 'placeholder' => 'Address Line 1', 'required', 'name' => 'address1']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('address2', '', ['class' => 'form-control', 'placeholder' => 'Address Line 2']) !!}
+        {!! Form::text('address2', '', ['class' => 'form-control', 'placeholder' => 'Address Line 2', 'name' => 'address2']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('city', '', ['class' => 'form-control', 'placeholder' => 'City', 'required']) !!}
+        {!! Form::text('city', '', ['class' => 'form-control', 'placeholder' => 'City', 'required', 'name' => 'city']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('county', '', ['class' => 'form-control', 'placeholder' => 'County']) !!}
+        {!! Form::text('county', '', ['class' => 'form-control', 'placeholder' => 'County', 'name' => 'county']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('post_code', '', ['class' => 'form-control', 'placeholder' => 'Postal Code', 'required#']) !!}
+        {!! Form::text('post_code', '', ['class' => 'form-control', 'placeholder' => 'Postal Code', 'required', 'name' => 'post_code']) !!}
     </div>
     <div class="form-group">
-        {!! Form::text('country', '', ['class' => 'form-control', 'placeholder' => 'Country', 'required']) !!}
+        {!! Form::text('country', '', ['class' => 'form-control', 'placeholder' => 'Country', 'required', 'name' => 'country']) !!}
     </div>
 <hr />
 <h5>Card Details</h5>

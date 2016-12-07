@@ -33,7 +33,8 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function cart() {
-        return $this->hasMany('App\Cart');
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
     }
 }

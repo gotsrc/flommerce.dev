@@ -28,6 +28,29 @@ class CartsController extends Controller
     }
 
     //
+    // Add the requested item to the cart by id.
+    //
+    public function postAddToCart($id, Request $request)
+    {
+        $product = Product::findOrFail($id);
+        $id = $product->id;
+        $cart_id = Session::get('rowId');
+        foreach ($items as $item) {
+            $cart_id = $item->rowId;
+        }
+
+        Cart::add(array(
+            'id'    => $product->id,
+            'name'  => $product->title,
+            'price' =>  $product->price,
+            'qty'   =>  $quantity
+        ))->associate('Product');
+
+        $content = Cart::content();
+
+        return redirect('/cart');
+    }
+    //
     // Remove the associated item from the cart by given rowId.
     //
     public function getRemoveCartItem($id, Request $request)
@@ -54,34 +77,6 @@ class CartsController extends Controller
         $rowId = $rows->where('id', $id)->first()->rowId;
 
         return Cart::update($rowId);
-    }
-
-    public function postCheckout(Request $request)
-    {
-        $this->middleware('auth');
-        $id = Session::get('rowId');
-        $items = Cart::content();
-        foreach ($items as $item) {
-            $cart_id = $item->rowId;
-        }
-
-        $total = Cart::total(2, '', '');
-
-        Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
-        try {
-            $charge = \Stripe\Charge::create(array(
-                "amount" => $total,
-                "currency" => "gbp",
-                "source" => $request->input('stripeToken'),
-                "description" => "Test Flommerce Charge"
-            ));
-        } catch (\Exception $e) {
-            return view('cart.checkout')->with('error', $e->getMessage());
-        }
-            Session::forget('cart');
-            Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
-            return redirect('/checkout/success');
-
     }
 
     public function getCheckoutSuccess()

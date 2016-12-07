@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
         {
             $table->increments('id')->unsigned()->index();
             $table->integer('category_id')->index();
-            $table->string('title')->unique();
+            $table->string('title');
             $table->text('description');
             $table->string('img_path');
             $table->decimal('price', 10, 2);

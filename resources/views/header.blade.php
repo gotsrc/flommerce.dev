@@ -53,7 +53,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="responsiveNavbarDropdown">
                                         <li>
-                                            <a href="{{ url('/') }}" class="dropdown-item">
+                                            <a href="{{ url('/dashboard') }}" class="dropdown-item">
                                                 <i class="fa fa-dashboard"></i>
                                                 Dashboard
                                             </a>
