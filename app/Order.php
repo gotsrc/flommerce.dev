@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace Flommerce;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    public function user()
+    public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('Flommerce\User');
     }
 }

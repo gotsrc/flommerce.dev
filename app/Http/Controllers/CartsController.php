@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Flommerce\Http\Controllers;
 
-use App\User;
-use App\Product;
-// use App\Cart;
-use Cart;
+use Flommerce\User;
+use Flommerce\Product;
+use Flommerce\Order;
+use Flommerce\Cart;
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Flommerce\Http\Requests;
+use Flommerce\Http\Controllers\Controller;
 use Session;
 use Stripe\Stripe;
+use Stripe\Charge;
 
 class CartsController extends Controller
 {
@@ -22,7 +23,6 @@ class CartsController extends Controller
     public function index()
     {
         $this->middleware('auth');
-        $cart = Cart::content();
 
         return view('cart.index', compact('cart'));
     }
@@ -30,7 +30,7 @@ class CartsController extends Controller
     //
     // Add the requested item to the cart by id.
     //
-    public function postAddToCart($id, Request $request)
+    public function postAddToCart(Request $request, $id)
     {
         $product = Product::findOrFail($id);
         $id = $product->id;
@@ -46,7 +46,7 @@ class CartsController extends Controller
             'qty'   =>  $quantity
         ))->associate('Product');
 
-        $content = Cart::content();
+        Cart::content();
 
         return redirect('/cart');
     }
@@ -64,9 +64,48 @@ class CartsController extends Controller
         return redirect('/cart');
     }
 
+    public function postCheckout(Request $request)
+    {
+        if (!Session::has('cart'))
+        {
+            return redirect()->route('CartsController');
+        }
+
+        $oldCart = Session::get('cart');
+
+        // $amount =
+        $cart = new Cart($oldCart);
+        $total = Cart::total(2, '', '');
+
+        Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
+        try {
+            Charge::create(array(
+                "amount" => $total,
+                "currency" => "gbp",
+                "source" => $request->input('stripeToken'),
+                "description" => "Some Sexy Description"
+            ));
+            $order = new Order();
+            $order->cart = serialize($cart);
+            $order->name = $request->input('name');
+            $order->address1 = $request->input('address1');
+            $order->address2 = $request->input('address2');
+            $order->city = $request->input('city');
+            $order->county = $request->input('county');
+            $order->post_code = $request->input('post_code');
+            $order->country = $request->input('country');
+            $order->payment_id = $charge->id;
+
+            Order::order()->save($order);
+        } catch (\Exception $e) {
+            return redirect('/cart/checkout')->with('error', $e->getMessage());
+        }
+            Session::forget('cart');
+            Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
+            return redirect()->url('/checkout/success');
+    }
     public function show(Request $request, $id)
     {
-
         return view('cart.checkout');
     }
 

@@ -28,7 +28,7 @@
                     </div>
                     <div class="card-footer">
                         <form action="{{ url('/products/' . $product->id . '/purchase') }}" method="POST">
-                            <input type="hidden" id="identifier" value="{!! $product->id !!}">
+                            <input type="hidden" id="identifier" value="{{ $product->id }}">
                             <input type="hidden" id="csrf_token" name="_token" value="{{ csrf_token() }}">
                             <strong>Quantity:</strong>
                                 <input type="quantity" id="quantity" class="" name="quantity" value="1">

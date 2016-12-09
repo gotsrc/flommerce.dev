@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Flommerce\Http\Controllers;
 
-use App\Category;
-use App\Cart;
-use App\Http\Requests;
-use App\Http\Requests\CategoryRequest;
-use App\Http\Controllers\Controller;
+use Flommerce\Category;
+use Flommerce\Cart;
+use Flommerce\Http\Requests;
+use Flommerce\Http\Requests\CategoryRequest;
+use Flommerce\Http\Controllers\Controller;
 use Session;
 
 class CategoriesController extends Controller

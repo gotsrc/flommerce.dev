@@ -25,7 +25,10 @@
                     </a>
                     <ul class="nav navbar-nav navbar-left">
                         <li class="nav-item">
-                            <a href="{{ url('/products') }}" class="nav-link">Products</a>
+                            <a href="{{ route('categories.index') }}" class="nav-link">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('products.index') }}" class="nav-link">Products</a>
                         </li>
                     </ul>
                     <form class="form-inline pull-right">
@@ -38,18 +41,21 @@
                             <li class="nav-item">
                                 <a href="{{ url('/cart') }}" class="nav-link">
                                     <i class="fa fa-shopping-cart"></i>
-                                    Your Cart
+                                    Cart
+                                    <span class="tag tag-pill-xs tag-default">
+                                        {{ Session::has('cart') ? Session::get('cart')->totalQuantity : '' }}
+                                    </span>
                                 </a>
                             </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle"
-                                    href="http://example.com"
+                                    href="{{ route('dashboard') }}"
                                     id="responsiveNavbarDropdown"
                                     data-toggle="dropdown"
                                     aria-haspopup="true"
                                     aria-expanded="false">
                                         <i class="fa fa-user-circle"></i>
-                                        {{ Auth::user()->name }}
+                                        {{ Auth::user()->first_name }}
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="responsiveNavbarDropdown">
                                         <li>

@@ -173,11 +173,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Flommerce\Providers\AppServiceProvider::class,
+        Flommerce\Providers\AuthServiceProvider::class,
+        // Flommerce\Providers\BroadcastServiceProvider::class,
+        Flommerce\Providers\EventServiceProvider::class,
+        Flommerce\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -228,7 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'ShoppingCart' => Gloudemans\Shoppingcart\Facades\Cart::class,
      ],
 
 ];

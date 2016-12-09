@@ -28,7 +28,7 @@
                                         @endif
                                     </div>
                                     <div class="card-footer">
-                                        <a href="{{ url('/products', $product->id) }}" class="btn btn-info">Purchase Item</a>
+                                        <a href="{{ route('cart.add', ['id' => $product->id]) }}" class="btn btn-info">Purchase Item</a>
                                     </div>
                                 </div>
                             </div>

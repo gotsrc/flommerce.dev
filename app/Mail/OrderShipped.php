@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Mail;
+namespace Flommerce\Mail;
 
-use App\Order;
+use Flommerce\Order;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;

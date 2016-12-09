@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Flommerce\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -11,7 +11,7 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '1',
             'title' => 'Super Linux Server',
             'description' => 'Everyone loves a Linux Server.',
@@ -22,7 +22,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '1',
             'title' => 'Super Linux Server',
             'description' => 'Everyone loves a Linux Server.',
@@ -33,7 +33,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '2',
             'title' => 'Web Development',
             'description' => 'Web Development at a great price. Please note the price is to reflect a per hour charge. This is currently on offer.',
@@ -44,7 +44,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '2',
             'title' => 'Web Development',
             'description' => 'Web Development at a great price. Please note the price is to reflect a per hour charge.',
@@ -55,7 +55,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '3',
             'title' => 'Linux Server Configuration',
             'description' => 'We will fix your Linux Server, COMPLETELY FREE!!!!',
@@ -66,7 +66,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product = new \App\Product([
+        $product = new \Flommerce\Product([
             'category_id' => '3',
             'title' => 'Domain',
             'description' => 'Buy any Linux Server from us and we will include a Domain of your choice for FREE!',

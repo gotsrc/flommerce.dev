@@ -38,4 +38,4 @@
         {!! Form::text('card_cvc', '', ['class' => 'form-control', 'placeholder' => 'CVC (3-Digit Code)','maxlength' => '3', 'required',  'id' => 'card_cvc']) !!}
     </div>
     {{ csrf_field() }}
-    <div class="card-footer">{!! Form::submit($submitButtonText, ['class' => 'btn btn-success']) !!}</div>
+    {!! Form::submit($submitButtonText, array('class' => 'button btn btn-success', 'id' => 'checkout')) !!}

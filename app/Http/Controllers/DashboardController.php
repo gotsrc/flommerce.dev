@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Flommerce\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
@@ -27,9 +27,9 @@ class DashboardController extends Controller
             $user = Auth::user();
             $id = Auth::id();
 
-            $name = $user->name;
+            $first_name = $user->first_name;
 
-            return view('auth.dashboard', compact('name'));
+            return view('auth.dashboard', compact('first_name'));
         } else {
             return view('home');
         }
