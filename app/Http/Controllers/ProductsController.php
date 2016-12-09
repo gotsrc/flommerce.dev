@@ -70,18 +70,19 @@ class ProductsController extends Controller
 
         $request->session()->put('cart', $cart);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('cart');
     }
 
     public function getCart()
     {
         if (!Session::has('cart'))
         {
-            return view('cart.index');
+            return view('cart.index', ['products' => null]);
         }
 
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
+        // dd($cart);
         return view('cart.index', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
     //

@@ -8,7 +8,7 @@
                 <div class="card">
                     <h4 class="card-header">Checkout</h4>
                     <div class="card-block">
-                        <p class="lead"><strong>Shopping Total:</strong> &pound;<?php echo Cart::total(2); ?></p>
+                        <p class="lead"><strong>Shopping Total:</strong> &pound; </p>
                         <hr />
                         <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
                             {{ Session::get('error') }}
