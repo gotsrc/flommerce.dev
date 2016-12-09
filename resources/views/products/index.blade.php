@@ -8,27 +8,28 @@
                 <h4 class="card-header">Products</h4>
                 <div class="card-block">
                     @foreach ($products->chunk(3) as $productChunk)
-                    <div class="row">
+                    <div class="container">
                         @foreach ($productChunk as $product)
-                        <div class="col-sm-6 col-md-4">
-                            <div class="card-group">
+                        <div class="col-md-4">
+                            <div class="card-group" style="margin-bottom: 25px">
                                 <div class="card">
-                                    <h6 class="card-header">
-                                        {{ $product->title }}
-                                    </h6>
-                                    <img class="card-img-top" src="/img/featured_images/{{ $product->img_path }}" style="width: 100%;" alt="Card image cap">
-                                    <div class="card-block">
-                                        <p class="card-text">
-                                            {{ $product->description }}
-                                        </p>
+                                    <div class="card-header">
+                                        <a href="/products/{{ $product->id }}">{{ $product->title }}</a>
                                         @if ($product->sale != 1)
 
                                         @else
-                                        <span class="tag tag-pill tag-success">Sale Item</span>
+                                        <h6><span class="tag tag-pill tag-success pull-right">Sale Item</span></h6>
                                         @endif
                                     </div>
+                                    <img class="card-img-top" height="100px" src="/img/featured_images/{{ $product->img_path }}" style="width: 100%;" alt="Card image cap">
+                                    <div class="card-block">
+                                        <p class="card-text">
+                                            <small>{{ str_limit($product->description, $limit = 40, $end = "...") }}</small>
+                                        </p>
+                                    </div>
                                     <div class="card-footer">
-                                        <a href="{{ route('cart.add', ['id' => $product->id]) }}" class="btn btn-info">Purchase Item</a>
+                                        <h5 style="margin: 0;"><span class="tag tag-default pull-left">&pound;{{ number_format($product->price, 2) }}</span></h5>
+                                        <a href="{{ route('cart.add', ['id' => $product->id]) }}" class="btn btn-success btn-sm pull-right"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
