@@ -62,7 +62,8 @@ class CartsController extends Controller
         // Get an API Key from http://dashboard.stripe.com/register
         // This should be the Secret (sk_*************) Api Key.
         // Without this the checkout will NOT work!!!!!
-        \Stripe\Stripe::setApiKey('sk_test_FbY7lvfLfYgd0p5bvrxbIdBW');
+        \Stripe\Stripe::setApiKey('');
+        
         $totalPrice = $cart->totalPrice;
         $token = $request->get('stripeToken');
         $cardholder_name = $request->get('cardholder_name');
@@ -96,12 +97,13 @@ class CartsController extends Controller
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
             Session::forget('cart');
+
+            // Mail the user upon success.
             $user = Auth::user();
             $email_address = $user->email;
             Mail::to($email_address)->send(new OrderShipped('Order Shipped'));
             Session::flash('message','Your payment was successful, ane email will be dispatched to verify your order letting you know when you will receive your newly purchased items.');
             return redirect()->route('checkout.success');
-            // Mail the user upon success.
 
     }
 

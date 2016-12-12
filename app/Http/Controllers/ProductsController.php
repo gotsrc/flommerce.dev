@@ -120,11 +120,17 @@ class ProductsController extends Controller
         } else {
             Session::forget('cart');
         }
-        
+
         return redirect()->route('cart');
 
     }
 
+    /**
+     * Remove all the items in the cart.
+     * @method getRemoveAllItems
+     * @param  [type]            $id [description]
+     * @return [type]                [description]
+     */
     public function getRemoveAllItems($id)
     {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;

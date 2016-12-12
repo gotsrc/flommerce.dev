@@ -9,7 +9,6 @@
 Homestead.json
 Homestead.yaml
 .env
-.env.example
 
 # -*- mode: gitignore; -*-
 *~
