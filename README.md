@@ -15,8 +15,9 @@ Features:
 How to Set Up:
 ---
 Firstly this will *NOT* work without the following types of accounts:
-1. Stripe Test Account (http://dashboard.stripe.com/register)
-2. MailTrap.io Account (You can use SMTP but configure in the .env file)
+
+* Stripe Test Account (http://dashboard.stripe.com/register)
+* MailTrap.io Account (You can use SMTP but configure in the .env file)
 
 Set up the Database (MySQL) via your correct settings within `.env`
 For example we recommend database of Flommerce, User of Flommerce and a NULL password for testing purposes.
