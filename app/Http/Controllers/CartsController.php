@@ -14,6 +14,7 @@ use Stripe\Stripe;
 use Stripe\Customer;
 use Stripe\Charge;
 use Session;
+use Auth;
 
 class CartsController extends Controller
 {
@@ -45,14 +46,14 @@ class CartsController extends Controller
         $cardholder_name = $request->get('cardholder_name');
 
         $customer = \Stripe\Customer::create(array(
-            "source"    =>  $token,
+            // "source"    =>  $token,
             "description" => $cardholder_name
         ));
         try {
             $charge = Charge::create(array(
-                "amount" => $totalPrice * 100,
+                "amount" => $cart->totalPrice * 100,
                 "currency" => "gbp",
-                "customer" => $customer,
+                "source" => $request->input('stripeToken'),
                 "description" => "Testing payments again."
             ));
             $order = new Order();
@@ -66,7 +67,8 @@ class CartsController extends Controller
             $order->country = $request->input('country');
             $order->payment_id = $charge->id;
 
-            return Order::order()->save($order);
+            Auth::user()->orders()->save($order);
+
         } catch (Stripe\Error\Card $e) {
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
