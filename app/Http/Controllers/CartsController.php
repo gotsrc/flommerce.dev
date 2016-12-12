@@ -14,6 +14,8 @@ use Stripe\Stripe;
 use Stripe\Customer;
 use Stripe\Charge;
 use Session;
+use Mail;
+use Flommerce\Mail\OrderShipped;
 use Auth;
 
 class CartsController extends Controller
@@ -23,6 +25,12 @@ class CartsController extends Controller
         $this->middleware('auth');
 
     }
+
+    /**
+     * Load the Main Cart View
+     * @method index
+     * @return [type] [description]
+     */
     public function index()
     {
         $this->middleware('auth');
@@ -30,6 +38,17 @@ class CartsController extends Controller
         return view('cart.index', compact('cart'));
     }
 
+    /**
+     * Process the actual Payment providing that the User has items in
+     * his / her cart. This uses the Stripe Library, you may need to setup
+     * your own Stripe account to test this functionality.
+     *
+     * Note: Please provide your own API Key / Token.
+     *
+     * @method postCheckout
+     * @param  Request      $request [description]
+     * @return [type]                [description]
+     */
     public function postCheckout(Request $request)
     {
         if (!Session::has('cart'))
@@ -40,15 +59,18 @@ class CartsController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
+        // Get an API Key from http://dashboard.stripe.com/register
+        // This should be the Secret (sk_*************) Api Key.
+        // Without this the checkout will NOT work!!!!!
         \Stripe\Stripe::setApiKey('sk_test_FbY7lvfLfYgd0p5bvrxbIdBW');
         $totalPrice = $cart->totalPrice;
         $token = $request->get('stripeToken');
         $cardholder_name = $request->get('cardholder_name');
 
         $customer = \Stripe\Customer::create(array(
-            // "source"    =>  $token,
             "description" => $cardholder_name
         ));
+
         try {
             $charge = Charge::create(array(
                 "amount" => $cart->totalPrice * 100,
@@ -69,19 +91,39 @@ class CartsController extends Controller
 
             Auth::user()->orders()->save($order);
 
+
         } catch (Stripe\Error\Card $e) {
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
             Session::forget('cart');
-            Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
+            $user = Auth::user();
+            $email_address = $user->email;
+            Mail::to($email_address)->send(new OrderShipped('Order Shipped'));
+            Session::flash('message','Your payment was successful, ane email will be dispatched to verify your order letting you know when you will receive your newly purchased items.');
             return redirect()->route('checkout.success');
+            // Mail the user upon success.
+
     }
 
+    /**
+     * Show the Current Cart for the User
+     * @method show
+     * @param  Request $request [description]
+     * @param  [type]  $id      [description]
+     * @return [type]           [description]
+     */
     public function show(Request $request, $id)
     {
         return view('cart.checkout');
     }
 
+    /**
+     * Update the Listing.
+     * @method update
+     * @param  [type]  $id      [description]
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
     public function update($id, Request $request)
     {
         $product_id = Product::findOrFail($id);
@@ -91,6 +133,11 @@ class CartsController extends Controller
         return Cart::update($rowId);
     }
 
+    /**
+     * Did the Checkout Succeed? If so, then return the cart success.
+     * @method getCheckoutSuccess
+     * @return [type]             [description]
+     */
     public function getCheckoutSuccess()
     {
         return view('cart.success');

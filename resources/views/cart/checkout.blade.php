@@ -8,8 +8,8 @@
                 <div class="card">
                     <h4 class="card-header">Checkout</h4>
                     <div class="card-block">
-                        <p class="lead"><strong>Shopping Total:</strong> &pound;<?=$totalPrice;?> </p>
-                        <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? '' : '' }}">
+                        <p class="lead"><strong>Shopping Total:</strong> &pound;<?=number_format($totalPrice, 2);?> </p>
+                        <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden-xs-up' : '' }}">
                             {{ Session::get('error') }}
                         </div>
                         <hr />

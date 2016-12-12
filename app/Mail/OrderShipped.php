@@ -17,16 +17,16 @@ class OrderShipped extends Mailable
      *
      * @var Order
      */
-    public $disorder;
+    public $order;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Order $disorder)
+    public function __construct($order)
     {
-        $this->order = $disorder;
+        $this->order = $order;
     }
 
     /**
@@ -36,10 +36,8 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.orders.processed')
-                    ->with([
-                        'order_name' => $this->order->name,
-                        'order_price' => $this->order->price
-                    ]);
+        return $this->from('orders@flommerce.dev', 'Flommerce')
+            ->subject('Order Confirmation')
+            ->view('emails.orders.processed');
     }
 }

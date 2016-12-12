@@ -8,6 +8,11 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Flommerce') }}</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <link href="/css/app.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/22eb44b58d.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-light navbar-default-bg navbar-static-top">
@@ -42,9 +47,9 @@
                                 <a href="{{ url('/cart') }}" class="nav-link">
                                     <i class="fa fa-shopping-cart"></i>
                                     Cart
-                                    <span class="tag tag-pill-xs tag-default">
-                                        {{ Session::has('cart') ? Session::get('cart')->totalQuantity : '' }}
-                                    </span>
+                                    @if(Session::has('cart'))
+                                        <span class="tag tag-pill tag-default">{{ Session::get('cart')->totalQuantity }}</span>
+                                    @endif
                                 </a>
                             </li>
                                 <li class="nav-item dropdown">

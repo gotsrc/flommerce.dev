@@ -42,4 +42,31 @@ class Cart
         $this->totalQuantity++;
         $this->totalPrice += $item->price;
     }
+
+    public function reduceItemByOne($id)
+    {
+        $this->items[$id]['quantity']--;
+        $this->items[$id]['price'] -= $this->items[$id]['item']['price'];
+        $this->totalQuantity--;
+        $this->totalPrice -= $this->items[$id]['item']['price'];
+    }
+
+    public function incrementItemByOne($id)
+    {
+        $this->items[$id]['quantity']++;
+        $this->items[$id]['price'] += $this->items[$id]['item']['price'];
+        $this->totalQuantity++;
+        $this->totalPrice += $this->items[$id]['item']['price'];
+
+        if ($this->items[$id]['quantity'] <= 0) {
+            unset($this->items[$id]);
+        }
+    }
+
+    public function removeAllItems($id)
+    {
+        $this->totalQuantity -= $this->items[$id]['quantity'];
+        $this->totalPrice -= $this->items[$id]['price'];
+        unset($this->items[$id]);
+    }
 }

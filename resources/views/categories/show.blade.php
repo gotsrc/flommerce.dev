@@ -27,11 +27,7 @@
                                                 <span class="tag tag-default">&pound; {{ $product->price }}</span>
                                             </div>
                                             <div class="card-footer">
-                                                <form action="{{ url('/products/' . $product->id . '/purchase') }}" method="POST">
-                                                    <input type="hidden" id="product_id" value="{{ $product->id }}">
-                                                    <input type="hidden" id="csrf_token" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="quantity" id="quantity" name="quantity" value="1">
-                                                    <button type="submit" class="btn btn-success pull-right"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                                                    <a href="{{ route('cart.add', ['id' => $product->id]) }}" class="btn btn-success btn-sm pull-right"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
                                                 </form>
                                             </div>
                                         </div>

@@ -15,6 +15,12 @@ use Stripe\Charge;
 
 class ProductsController extends Controller
 {
+
+    /**
+     * Main Products View.
+     * @method index
+     * @return [type] [description]
+     */
     public function index()
     {
         $products = Product::all();
@@ -22,9 +28,12 @@ class ProductsController extends Controller
         return view('products.index', ['products' => $products]);
     }
 
-    //
-    // Show a Product with a given ID.
-    //
+    /**
+     * Show a Product with a Given ID.
+     * @method show
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
     public function show($id)
     {
         $product = Product::findOrFail($id);
@@ -32,19 +41,22 @@ class ProductsController extends Controller
         return view('products.show', compact('product'));
     }
 
-    //
-    // Show the form so that the user can create a category.
-    // URI: flommerce.dev/category/create
-    //
+    /**
+     * Load the Form so that the user can add a Product
+     * @method create
+     * @return [type] [description]
+     */
     public function create()
     {
         return view('products.create');
     }
 
-    //
-    // Store the data after user input and send the user
-    // back to the products page to review.
-    //
+    /**
+     * Add a Product to a Category
+     * @method store
+     * @param  ProductRequest $request [description]
+     * @return [type]                  [description]
+     */
     public function store(ProductRequest $request)
     {
         Product::create($request->all());
@@ -52,6 +64,13 @@ class ProductsController extends Controller
         return redirect('products');
     }
 
+    /**
+     * Add the requested Item to the cart by ID.
+     * @method getAddToCart
+     * @param  Request      $request [description]
+     * @param  [type]       $id      [description]
+     * @return [type]                [description]
+     */
     public function getAddToCart(Request $request, $id)
     {
         $product = Product::findOrFail($id);
@@ -65,6 +84,69 @@ class ProductsController extends Controller
         return redirect()->route('cart');
     }
 
+    /**
+    * Increment the Item Quantity by One.
+    * @method getIncrementItemByOne
+    * @param  [type]                $id [description]
+    * @return [type]                    [description]
+    */
+    public function getIncrementItemByOne($id)
+    {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+
+        $cart = new Cart($oldCart);
+        $cart->incrementItemByOne($id);
+
+        Session::put('cart', $cart);
+        return redirect()->route('cart');
+    }
+
+    /**
+     * Reduce the Item Quantity by One.
+     * @method getReduceItemByOne
+     * @param  [type]             $id [description]
+     * @return [type]                 [description]
+     */
+    public function getReduceItemByOne($id)
+    {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+
+        $cart = new Cart($oldCart);
+        $cart->reduceItemByOne($id);
+
+        if(count($cart->items) > 0)
+        {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+        
+        return redirect()->route('cart');
+
+    }
+
+    public function getRemoveAllItems($id)
+    {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+
+        $cart = new Cart($oldCart);
+        $cart->removeAllItems($id);
+
+        if(count($cart->items) > 0)
+        {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+
+        return redirect()->route('cart');
+    }
+
+    /**
+     * Retrieve the current Cart for the associated User.
+     * @method getCart
+     * @return [type]  [description]
+     */
     public function getCart()
     {
         if (!Session::has('cart'))
@@ -78,6 +160,12 @@ class ProductsController extends Controller
         return view('cart.index', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 
+    /**
+     * Get the Current Checkout before Submitting the Form so that
+     * the user can verify the amounts and process payment.
+     * @method getCheckout
+     * @return [type]      [description]
+     */
     public function getCheckout()
     {
         if (!Session::has('cart'))
@@ -92,50 +180,15 @@ class ProductsController extends Controller
 
     }
 
-    public function postCheckout(Request $request)
-    {
-        if (!Session::has('cart'))
-        {
-            return redirect()->route('CartsController');
-        }
-
-        $oldCart = Session::get('cart');
-
-        // $amount =
-        $cart = new Cart($oldCart);
-        $total = Cart::total(2, '', '');
-
-        Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
-        try {
-            $charge = Charge::create(array(
-                "amount" => $total,
-                "currency" => "gbp",
-                "source" => $request->input('stripeToken'),
-                "description" => "Some Sexy Description"
-            ));
-            $order = new Order();
-            $order->cart = serialize($cart);
-            $order->name = $request->input('name');
-            $order->address1 = $request->input('address1');
-            $order->address2 = $request->input('address2');
-            $order->city = $request->input('city');
-            $order->county = $request->input('county');
-            $order->post_code = $request->input('post_code');
-            $order->country = $request->input('country');
-            $order->payment_id = $charge->id;
-
-            Order::order()->save($order);
-        } catch (\Exception $e) {
-            return redirect('/cart/checkout')->with('error', $e->getMessage());
-        }
-            Session::forget('cart');
-            Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
-            return redirect()->url('/checkout/success');
-    }
-
-    //
-    // Edit the current product.
-    //
+    /**
+     * Edit the current Product (Functionality not implemented front end.)
+     *
+     * Can be accessed by typing /edit after the Product ID in URI.
+     *
+     * @method edit
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
     public function edit($id)
     {
         $product = Product::find($id);
@@ -143,6 +196,13 @@ class ProductsController extends Controller
         return view('products.edit', compact('product'));
     }
 
+    /**
+     * Update the actual form.
+     * @method update
+     * @param  [type]         $id      [description]
+     * @param  ProductRequest $request [description]
+     * @return [type]                  [description]
+     */
     public function update($id, ProductRequest $request)
     {
         $product = Product::find($id);

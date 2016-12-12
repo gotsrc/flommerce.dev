@@ -17,7 +17,7 @@ class DashboardController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application dashboard and any orders.
      *
      * @return \Illuminate\Http\Response
      */
@@ -26,10 +26,14 @@ class DashboardController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $id = Auth::id();
-
             $first_name = $user->first_name;
 
-            return view('auth.dashboard', compact('first_name'));
+            $orders = Auth::user()->orders;
+            $orders->transform(function($order, $key) {
+                $order->cart = unserialize($order->cart);
+                return $order;
+            });
+            return view('auth.dashboard', compact('first_name', 'orders'));
         } else {
             return view('home');
         }
