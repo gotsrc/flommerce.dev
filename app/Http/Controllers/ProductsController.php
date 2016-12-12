@@ -10,19 +10,11 @@ use Illuminate\Http\Request;
 use Flommerce\Http\Requests;
 use Flommerce\Http\Requests\ProductRequest;
 use Session;
-// use ShoppingCart;
 use Stripe\Stripe;
 use Stripe\Charge;
 
 class ProductsController extends Controller
 {
-    public function __construct()
-    {
-        $products = Product::all();
-
-        return view('products.index', ['products' => $products]);
-    }
-
     public function index()
     {
         $products = Product::all();
@@ -85,30 +77,19 @@ class ProductsController extends Controller
         // dd($cart);
         return view('cart.index', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
-    //
-    // Add the requested item to the cart by id.
-    //
-    //
-    public function postAddToCart(Request $request, $id)
+
+    public function getCheckout()
     {
-        $method = $request->method('post');
-        if ($request->isMethod('post'))
+        if (!Session::has('cart'))
         {
-            $product = Product::findOrFail($id);
-            $product_id = $request->get('product_id');
-            $quantity = $request->get('quantity');
-
-            Cart::add(array(
-                'id'    => $product->id,
-                'name'  => $product->title,
-                'price' =>  $product->price,
-                'qty'   =>  $quantity
-            ))->associate('Product');
+            return view('cart.index');
         }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $totalPrice = $cart->totalPrice;
+        // dd($totalPrice);
+        return view('cart.checkout', ['totalPrice' => $totalPrice]);
 
-        $cart = Cart::content();
-        // dd($cart);
-        return view('cart.index', ['cart' => $cart]);
     }
 
     public function postCheckout(Request $request)

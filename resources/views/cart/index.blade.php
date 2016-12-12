@@ -43,7 +43,7 @@
                                     </table>
                                 </div>
                                 <div class="card-footer text-xs-right">
-                                    <a href="/cart/checkout" class="btn btn-success">Checkout</a>
+                                    <a href="{{ route('checkout') }}" class="btn btn-success">Checkout</a>
                                 </div>
                             @else
                                 <div class="card-block">

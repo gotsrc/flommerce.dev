@@ -9,10 +9,11 @@ use Flommerce\Cart;
 use Illuminate\Http\Request;
 use Flommerce\Http\Requests;
 use Flommerce\Http\Controllers\Controller;
-use Session;
 use Prophecy\Exception\Exception;
 use Stripe\Stripe;
+use Stripe\Customer;
 use Stripe\Charge;
+use Session;
 
 class CartsController extends Controller
 {
@@ -28,43 +29,6 @@ class CartsController extends Controller
         return view('cart.index', compact('cart'));
     }
 
-    //
-    // Add the requested item to the cart by id.
-    //
-    // public function postAddToCart(Request $request, $id)
-    // {
-    //     $product = Product::findOrFail($id);
-    //     $id = $product->id;
-    //     $cart_id = Session::get('rowId');
-    //     foreach ($items as $item) {
-    //         $cart_id = $item->rowId;
-    //     }
-    //
-    //     Cart::add(array(
-    //         'id'    => $product->id,
-    //         'name'  => $product->title,
-    //         'price' =>  $product->price,
-    //         'qty'   =>  $quantity
-    //     ))->associate('Product');
-    //
-    //     Cart::content();
-    //
-    //     return redirect('/cart');
-    // }
-    // //
-    // // Remove the associated item from the cart by given rowId.
-    // //
-    // public function getRemoveCartItem($id, Request $request)
-    // {
-    //     $product_id = Product::findOrFail($id);
-    //     $rows = Cart::content();
-    //     $rowId = $rows->where('id', $id)->first()->rowId;
-    //
-    //     Cart::remove($rowId);
-    //
-    //     return redirect('/cart');
-    // }
-
     public function postCheckout(Request $request)
     {
         if (!Session::has('cart'))
@@ -75,36 +39,42 @@ class CartsController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
-        $total = $cart->totalPrice;
-        dd($total);
+        \Stripe\Stripe::setApiKey('sk_test_FbY7lvfLfYgd0p5bvrxbIdBW');
+        $totalPrice = $cart->totalPrice;
+        $token = $request->get('stripeToken');
+        $cardholder_name = $request->get('cardholder_name');
 
-        Stripe::setApiKey('sk_test_Ek3YDzQZhUDjNTpTtu2r6s0p');
+        $customer = \Stripe\Customer::create(array(
+            "source"    =>  $token,
+            "description" => $cardholder_name
+        ));
         try {
             $charge = Charge::create(array(
-                "amount" => $total * 100,
+                "amount" => $totalPrice * 100,
                 "currency" => "gbp",
-                "source" => $request->input('stripeToken'),
-                "description" => "Some description"
+                "customer" => $customer,
+                "description" => "Testing payments again."
             ));
-            // $order = new Order();
-            // $order->cart = serialize($cart);
-            // $order->name = $request->input('name');
-            // $order->address1 = $request->input('address1');
-            // $order->address2 = $request->input('address2');
-            // $order->city = $request->input('city');
-            // $order->county = $request->input('county');
-            // $order->post_code = $request->input('post_code');
-            // $order->country = $request->input('country');
-            // $order->payment_id = $charge->id;
-            //
-            // return Order::order()->save($order);
-        } catch (\Exception $e) {
-            return redirect('/cart/checkout')->with('error', $e->getMessage());
+            $order = new Order();
+            $order->cart = serialize($cart);
+            $order->name = $request->input('name');
+            $order->address1 = $request->input('address1');
+            $order->address2 = $request->input('address2');
+            $order->city = $request->input('city');
+            $order->county = $request->input('county');
+            $order->post_code = $request->input('post_code');
+            $order->country = $request->input('country');
+            $order->payment_id = $charge->id;
+
+            return Order::order()->save($order);
+        } catch (Stripe\Error\Card $e) {
+            return redirect()->route('checkout')->with('error', $e->getMessage());
         }
             Session::forget('cart');
             Session::flash('message','Your payment was successful, and will be dispatched once we verify your order letting you know when you will receive your newly purchased items.');
-            return redirect()->url('/checkout/success');
+            return redirect()->route('checkout.success');
     }
+
     public function show(Request $request, $id)
     {
         return view('cart.checkout');

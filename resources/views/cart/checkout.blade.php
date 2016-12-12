@@ -8,12 +8,12 @@
                 <div class="card">
                     <h4 class="card-header">Checkout</h4>
                     <div class="card-block">
-                        <p class="lead"><strong>Shopping Total:</strong> &pound; </p>
-                        <hr />
-                        <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
+                        <p class="lead"><strong>Shopping Total:</strong> &pound;<?=$totalPrice;?> </p>
+                        <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? '' : '' }}">
                             {{ Session::get('error') }}
                         </div>
-                        {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'id' => 'checkout_form']) !!}
+                        <hr />
+                        {!! Form::open(['url' => 'checkout', 'method' => 'POST', 'class' => 'checkout_form']) !!}
                         @include ('cart.form', ['submitButtonText' => 'Checkout'])
                         <!-- Close the form -->
                         {!! Form::close() !!}
@@ -27,5 +27,5 @@
 
 @section('scripts')
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript" src="{{ url('js/checkout.js') }}"></script>
+<script type="text/javascript" src="{{ url('/js/checkout.js') }}"></script>
 @endsection

@@ -23,7 +23,7 @@
 <hr />
 <h5>Card Details</h5>
     <div class="form-group">
-        {!! Form::text('card_name', '', ['class' => 'form-control', 'placeholder' => 'Card Name', 'required', 'id' => 'card_name']) !!}
+        {!! Form::text('cardholder_name', '', ['class' => 'form-control', 'placeholder' => 'Card Holder Name', 'required', 'id' => 'cardholder_name']) !!}
     </div>
     <div class="form-group">
         {!! Form::text('card_number', '', ['class' => 'form-control', 'placeholder' => '0000-0000-0000-0000', 'maxlength' => '19', 'required', 'id' => 'card_number']) !!}
@@ -38,4 +38,4 @@
         {!! Form::text('card_cvc', '', ['class' => 'form-control', 'placeholder' => 'CVC (3-Digit Code)','maxlength' => '3', 'required',  'id' => 'card_cvc']) !!}
     </div>
     {{ csrf_field() }}
-    {!! Form::submit($submitButtonText, array('class' => 'button btn btn-success', 'id' => 'checkout')) !!}
+    <button type="submit" class="button btn btn-success purchase" id="purchase" name="purchase">Buy Now</button>

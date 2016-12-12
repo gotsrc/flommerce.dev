@@ -66,6 +66,8 @@ class CategoriesController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        return $category->update($request->all());
+        $category->update($request->all());
+
+        return view('categories.show', compact('category'));
     }
 }
