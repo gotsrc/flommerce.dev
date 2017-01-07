@@ -62,8 +62,8 @@ class CartsController extends Controller
         // Get an API Key from http://dashboard.stripe.com/register
         // This should be the Secret (sk_*************) Api Key.
         // Without this the checkout will NOT work!!!!!
-        \Stripe\Stripe::setApiKey('');
-        
+        \Stripe\Stripe::setApiKey('sk_test_FbY7lvfLfYgd0p5bvrxbIdBW');
+
         $totalPrice = $cart->totalPrice;
         $token = $request->get('stripeToken');
         $cardholder_name = $request->get('cardholder_name');

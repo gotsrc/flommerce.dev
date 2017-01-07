@@ -1,5 +1,5 @@
 /logs/*.log
-*.log
+.log
 /node_modules
 /public/storage
 /vendor
@@ -19,7 +19,10 @@ Homestead.yaml
 auto-save-list
 tramp
 .\#*
-
+*.swo
+*.swp
+*.php.swo
+*.php.swp
 # Org-mode
 .org-id-locations
 *_archive
